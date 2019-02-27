@@ -7,64 +7,64 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		EA644B852227377B008A0D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644B842227377B008A0D22 /* AppDelegate.swift */; };
-		EA644B872227377B008A0D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644B862227377B008A0D22 /* ViewController.swift */; };
-		EA644B8A2227377B008A0D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA644B882227377B008A0D22 /* Main.storyboard */; };
-		EA644B8C2227377D008A0D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA644B8B2227377D008A0D22 /* Assets.xcassets */; };
-		EA644B8F2227377D008A0D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA644B8D2227377D008A0D22 /* LaunchScreen.storyboard */; };
-		EA644B9A2227377D008A0D22 /* CareConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644B992227377D008A0D22 /* CareConnectTests.swift */; };
-		EA644BA52227377D008A0D22 /* CareConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BA42227377D008A0D22 /* CareConnectUITests.swift */; };
+		EA644BF922273D89008A0D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BF822273D89008A0D22 /* AppDelegate.swift */; };
+		EA644BFB22273D89008A0D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BFA22273D89008A0D22 /* ViewController.swift */; };
+		EA644BFE22273D89008A0D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA644BFC22273D89008A0D22 /* Main.storyboard */; };
+		EA644C0022273D89008A0D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA644BFF22273D89008A0D22 /* Assets.xcassets */; };
+		EA644C0322273D89008A0D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA644C0122273D89008A0D22 /* LaunchScreen.storyboard */; };
+		EA644C0E22273D89008A0D22 /* CareConnectGiverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644C0D22273D89008A0D22 /* CareConnectGiverTests.swift */; };
+		EA644C1922273D89008A0D22 /* CareConnectGiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644C1822273D89008A0D22 /* CareConnectGiverUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		EA644B962227377D008A0D22 /* PBXContainerItemProxy */ = {
+		EA644C0A22273D89008A0D22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EA644B792227377B008A0D22 /* Project object */;
+			containerPortal = EA644BED22273D89008A0D22 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA644B802227377B008A0D22;
-			remoteInfo = CareConnect;
+			remoteGlobalIDString = EA644BF422273D89008A0D22;
+			remoteInfo = CareConnectGiver;
 		};
-		EA644BA12227377D008A0D22 /* PBXContainerItemProxy */ = {
+		EA644C1522273D89008A0D22 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = EA644B792227377B008A0D22 /* Project object */;
+			containerPortal = EA644BED22273D89008A0D22 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = EA644B802227377B008A0D22;
-			remoteInfo = CareConnect;
+			remoteGlobalIDString = EA644BF422273D89008A0D22;
+			remoteInfo = CareConnectGiver;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		EA644B812227377B008A0D22 /* CareConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA644B842227377B008A0D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA644B862227377B008A0D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		EA644B892227377B008A0D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		EA644B8B2227377D008A0D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EA644B8E2227377D008A0D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		EA644B902227377D008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA644B952227377D008A0D22 /* CareConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA644B992227377D008A0D22 /* CareConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectTests.swift; sourceTree = "<group>"; };
-		EA644B9B2227377D008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EA644BA02227377D008A0D22 /* CareConnectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareConnectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EA644BA42227377D008A0D22 /* CareConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectUITests.swift; sourceTree = "<group>"; };
-		EA644BA62227377D008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA644BF522273D89008A0D22 /* CareConnectGiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareConnectGiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA644BF822273D89008A0D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA644BFA22273D89008A0D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA644BFD22273D89008A0D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA644BFF22273D89008A0D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA644C0222273D89008A0D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA644C0422273D89008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA644C0922273D89008A0D22 /* CareConnectGiverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareConnectGiverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA644C0D22273D89008A0D22 /* CareConnectGiverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectGiverTests.swift; sourceTree = "<group>"; };
+		EA644C0F22273D89008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA644C1422273D89008A0D22 /* CareConnectGiverUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareConnectGiverUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA644C1822273D89008A0D22 /* CareConnectGiverUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectGiverUITests.swift; sourceTree = "<group>"; };
+		EA644C1A22273D89008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		EA644B7E2227377B008A0D22 /* Frameworks */ = {
+		EA644BF222273D89008A0D22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA644B922227377D008A0D22 /* Frameworks */ = {
+		EA644C0622273D89008A0D22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA644B9D2227377D008A0D22 /* Frameworks */ = {
+		EA644C1122273D89008A0D22 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -74,137 +74,137 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EA644B782227377B008A0D22 = {
+		EA644BEC22273D89008A0D22 = {
 			isa = PBXGroup;
 			children = (
-				EA644B832227377B008A0D22 /* CareConnect */,
-				EA644B982227377D008A0D22 /* CareConnectTests */,
-				EA644BA32227377D008A0D22 /* CareConnectUITests */,
-				EA644B822227377B008A0D22 /* Products */,
+				EA644BF722273D89008A0D22 /* CareConnectGiver */,
+				EA644C0C22273D89008A0D22 /* CareConnectGiverTests */,
+				EA644C1722273D89008A0D22 /* CareConnectGiverUITests */,
+				EA644BF622273D89008A0D22 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		EA644B822227377B008A0D22 /* Products */ = {
+		EA644BF622273D89008A0D22 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EA644B812227377B008A0D22 /* CareConnect.app */,
-				EA644B952227377D008A0D22 /* CareConnectTests.xctest */,
-				EA644BA02227377D008A0D22 /* CareConnectUITests.xctest */,
+				EA644BF522273D89008A0D22 /* CareConnectGiver.app */,
+				EA644C0922273D89008A0D22 /* CareConnectGiverTests.xctest */,
+				EA644C1422273D89008A0D22 /* CareConnectGiverUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		EA644B832227377B008A0D22 /* CareConnect */ = {
+		EA644BF722273D89008A0D22 /* CareConnectGiver */ = {
 			isa = PBXGroup;
 			children = (
-				EA644B842227377B008A0D22 /* AppDelegate.swift */,
-				EA644B862227377B008A0D22 /* ViewController.swift */,
-				EA644B882227377B008A0D22 /* Main.storyboard */,
-				EA644B8B2227377D008A0D22 /* Assets.xcassets */,
-				EA644B8D2227377D008A0D22 /* LaunchScreen.storyboard */,
-				EA644B902227377D008A0D22 /* Info.plist */,
+				EA644BF822273D89008A0D22 /* AppDelegate.swift */,
+				EA644BFA22273D89008A0D22 /* ViewController.swift */,
+				EA644BFC22273D89008A0D22 /* Main.storyboard */,
+				EA644BFF22273D89008A0D22 /* Assets.xcassets */,
+				EA644C0122273D89008A0D22 /* LaunchScreen.storyboard */,
+				EA644C0422273D89008A0D22 /* Info.plist */,
 			);
-			path = CareConnect;
+			path = CareConnectGiver;
 			sourceTree = "<group>";
 		};
-		EA644B982227377D008A0D22 /* CareConnectTests */ = {
+		EA644C0C22273D89008A0D22 /* CareConnectGiverTests */ = {
 			isa = PBXGroup;
 			children = (
-				EA644B992227377D008A0D22 /* CareConnectTests.swift */,
-				EA644B9B2227377D008A0D22 /* Info.plist */,
+				EA644C0D22273D89008A0D22 /* CareConnectGiverTests.swift */,
+				EA644C0F22273D89008A0D22 /* Info.plist */,
 			);
-			path = CareConnectTests;
+			path = CareConnectGiverTests;
 			sourceTree = "<group>";
 		};
-		EA644BA32227377D008A0D22 /* CareConnectUITests */ = {
+		EA644C1722273D89008A0D22 /* CareConnectGiverUITests */ = {
 			isa = PBXGroup;
 			children = (
-				EA644BA42227377D008A0D22 /* CareConnectUITests.swift */,
-				EA644BA62227377D008A0D22 /* Info.plist */,
+				EA644C1822273D89008A0D22 /* CareConnectGiverUITests.swift */,
+				EA644C1A22273D89008A0D22 /* Info.plist */,
 			);
-			path = CareConnectUITests;
+			path = CareConnectGiverUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EA644B802227377B008A0D22 /* CareConnect */ = {
+		EA644BF422273D89008A0D22 /* CareConnectGiver */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA644BA92227377D008A0D22 /* Build configuration list for PBXNativeTarget "CareConnect" */;
+			buildConfigurationList = EA644C1D22273D89008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectGiver" */;
 			buildPhases = (
-				EA644B7D2227377B008A0D22 /* Sources */,
-				EA644B7E2227377B008A0D22 /* Frameworks */,
-				EA644B7F2227377B008A0D22 /* Resources */,
+				EA644BF122273D89008A0D22 /* Sources */,
+				EA644BF222273D89008A0D22 /* Frameworks */,
+				EA644BF322273D89008A0D22 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = CareConnect;
-			productName = CareConnect;
-			productReference = EA644B812227377B008A0D22 /* CareConnect.app */;
+			name = CareConnectGiver;
+			productName = CareConnectGiver;
+			productReference = EA644BF522273D89008A0D22 /* CareConnectGiver.app */;
 			productType = "com.apple.product-type.application";
 		};
-		EA644B942227377D008A0D22 /* CareConnectTests */ = {
+		EA644C0822273D89008A0D22 /* CareConnectGiverTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA644BAC2227377D008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectTests" */;
+			buildConfigurationList = EA644C2022273D89008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectGiverTests" */;
 			buildPhases = (
-				EA644B912227377D008A0D22 /* Sources */,
-				EA644B922227377D008A0D22 /* Frameworks */,
-				EA644B932227377D008A0D22 /* Resources */,
+				EA644C0522273D89008A0D22 /* Sources */,
+				EA644C0622273D89008A0D22 /* Frameworks */,
+				EA644C0722273D89008A0D22 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EA644B972227377D008A0D22 /* PBXTargetDependency */,
+				EA644C0B22273D89008A0D22 /* PBXTargetDependency */,
 			);
-			name = CareConnectTests;
-			productName = CareConnectTests;
-			productReference = EA644B952227377D008A0D22 /* CareConnectTests.xctest */;
+			name = CareConnectGiverTests;
+			productName = CareConnectGiverTests;
+			productReference = EA644C0922273D89008A0D22 /* CareConnectGiverTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		EA644B9F2227377D008A0D22 /* CareConnectUITests */ = {
+		EA644C1322273D89008A0D22 /* CareConnectGiverUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EA644BAF2227377D008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectUITests" */;
+			buildConfigurationList = EA644C2322273D89008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectGiverUITests" */;
 			buildPhases = (
-				EA644B9C2227377D008A0D22 /* Sources */,
-				EA644B9D2227377D008A0D22 /* Frameworks */,
-				EA644B9E2227377D008A0D22 /* Resources */,
+				EA644C1022273D89008A0D22 /* Sources */,
+				EA644C1122273D89008A0D22 /* Frameworks */,
+				EA644C1222273D89008A0D22 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EA644BA22227377D008A0D22 /* PBXTargetDependency */,
+				EA644C1622273D89008A0D22 /* PBXTargetDependency */,
 			);
-			name = CareConnectUITests;
-			productName = CareConnectUITests;
-			productReference = EA644BA02227377D008A0D22 /* CareConnectUITests.xctest */;
+			name = CareConnectGiverUITests;
+			productName = CareConnectGiverUITests;
+			productReference = EA644C1422273D89008A0D22 /* CareConnectGiverUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		EA644B792227377B008A0D22 /* Project object */ = {
+		EA644BED22273D89008A0D22 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = Tony;
 				TargetAttributes = {
-					EA644B802227377B008A0D22 = {
+					EA644BF422273D89008A0D22 = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					EA644B942227377D008A0D22 = {
+					EA644C0822273D89008A0D22 = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = EA644B802227377B008A0D22;
+						TestTargetID = EA644BF422273D89008A0D22;
 					};
-					EA644B9F2227377D008A0D22 = {
+					EA644C1322273D89008A0D22 = {
 						CreatedOnToolsVersion = 10.1;
-						TestTargetID = EA644B802227377B008A0D22;
+						TestTargetID = EA644BF422273D89008A0D22;
 					};
 				};
 			};
-			buildConfigurationList = EA644B7C2227377B008A0D22 /* Build configuration list for PBXProject "CareConnect" */;
+			buildConfigurationList = EA644BF022273D89008A0D22 /* Build configuration list for PBXProject "CareConnectGiver" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -212,37 +212,37 @@
 				en,
 				Base,
 			);
-			mainGroup = EA644B782227377B008A0D22;
-			productRefGroup = EA644B822227377B008A0D22 /* Products */;
+			mainGroup = EA644BEC22273D89008A0D22;
+			productRefGroup = EA644BF622273D89008A0D22 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EA644B802227377B008A0D22 /* CareConnect */,
-				EA644B942227377D008A0D22 /* CareConnectTests */,
-				EA644B9F2227377D008A0D22 /* CareConnectUITests */,
+				EA644BF422273D89008A0D22 /* CareConnectGiver */,
+				EA644C0822273D89008A0D22 /* CareConnectGiverTests */,
+				EA644C1322273D89008A0D22 /* CareConnectGiverUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		EA644B7F2227377B008A0D22 /* Resources */ = {
+		EA644BF322273D89008A0D22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA644B8F2227377D008A0D22 /* LaunchScreen.storyboard in Resources */,
-				EA644B8C2227377D008A0D22 /* Assets.xcassets in Resources */,
-				EA644B8A2227377B008A0D22 /* Main.storyboard in Resources */,
+				EA644C0322273D89008A0D22 /* LaunchScreen.storyboard in Resources */,
+				EA644C0022273D89008A0D22 /* Assets.xcassets in Resources */,
+				EA644BFE22273D89008A0D22 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA644B932227377D008A0D22 /* Resources */ = {
+		EA644C0722273D89008A0D22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA644B9E2227377D008A0D22 /* Resources */ = {
+		EA644C1222273D89008A0D22 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -252,59 +252,59 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		EA644B7D2227377B008A0D22 /* Sources */ = {
+		EA644BF122273D89008A0D22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA644B872227377B008A0D22 /* ViewController.swift in Sources */,
-				EA644B852227377B008A0D22 /* AppDelegate.swift in Sources */,
+				EA644BFB22273D89008A0D22 /* ViewController.swift in Sources */,
+				EA644BF922273D89008A0D22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA644B912227377D008A0D22 /* Sources */ = {
+		EA644C0522273D89008A0D22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA644B9A2227377D008A0D22 /* CareConnectTests.swift in Sources */,
+				EA644C0E22273D89008A0D22 /* CareConnectGiverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EA644B9C2227377D008A0D22 /* Sources */ = {
+		EA644C1022273D89008A0D22 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA644BA52227377D008A0D22 /* CareConnectUITests.swift in Sources */,
+				EA644C1922273D89008A0D22 /* CareConnectGiverUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		EA644B972227377D008A0D22 /* PBXTargetDependency */ = {
+		EA644C0B22273D89008A0D22 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA644B802227377B008A0D22 /* CareConnect */;
-			targetProxy = EA644B962227377D008A0D22 /* PBXContainerItemProxy */;
+			target = EA644BF422273D89008A0D22 /* CareConnectGiver */;
+			targetProxy = EA644C0A22273D89008A0D22 /* PBXContainerItemProxy */;
 		};
-		EA644BA22227377D008A0D22 /* PBXTargetDependency */ = {
+		EA644C1622273D89008A0D22 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = EA644B802227377B008A0D22 /* CareConnect */;
-			targetProxy = EA644BA12227377D008A0D22 /* PBXContainerItemProxy */;
+			target = EA644BF422273D89008A0D22 /* CareConnectGiver */;
+			targetProxy = EA644C1522273D89008A0D22 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EA644B882227377B008A0D22 /* Main.storyboard */ = {
+		EA644BFC22273D89008A0D22 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA644B892227377B008A0D22 /* Base */,
+				EA644BFD22273D89008A0D22 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		EA644B8D2227377D008A0D22 /* LaunchScreen.storyboard */ = {
+		EA644C0122273D89008A0D22 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				EA644B8E2227377D008A0D22 /* Base */,
+				EA644C0222273D89008A0D22 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -312,7 +312,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		EA644BA72227377D008A0D22 /* Debug */ = {
+		EA644C1B22273D89008A0D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -373,7 +373,7 @@
 			};
 			name = Debug;
 		};
-		EA644BA82227377D008A0D22 /* Release */ = {
+		EA644C1C22273D89008A0D22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -428,164 +428,164 @@
 			};
 			name = Release;
 		};
-		EA644BAA2227377D008A0D22 /* Debug */ = {
+		EA644C1E22273D89008A0D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 993G373D9B;
-				INFOPLIST_FILE = CareConnect/Info.plist;
+				INFOPLIST_FILE = CareConnectGiver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnect;
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectGiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		EA644BAB2227377D008A0D22 /* Release */ = {
+		EA644C1F22273D89008A0D22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 993G373D9B;
-				INFOPLIST_FILE = CareConnect/Info.plist;
+				INFOPLIST_FILE = CareConnectGiver/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnect;
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectGiver;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		EA644BAD2227377D008A0D22 /* Debug */ = {
+		EA644C2122273D89008A0D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 993G373D9B;
-				INFOPLIST_FILE = CareConnectTests/Info.plist;
+				INFOPLIST_FILE = CareConnectGiverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectGiverTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareConnect.app/CareConnect";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareConnectGiver.app/CareConnectGiver";
 			};
 			name = Debug;
 		};
-		EA644BAE2227377D008A0D22 /* Release */ = {
+		EA644C2222273D89008A0D22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 993G373D9B;
-				INFOPLIST_FILE = CareConnectTests/Info.plist;
+				INFOPLIST_FILE = CareConnectGiverTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectTests;
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectGiverTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareConnect.app/CareConnect";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareConnectGiver.app/CareConnectGiver";
 			};
 			name = Release;
 		};
-		EA644BB02227377D008A0D22 /* Debug */ = {
+		EA644C2422273D89008A0D22 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 993G373D9B;
-				INFOPLIST_FILE = CareConnectUITests/Info.plist;
+				INFOPLIST_FILE = CareConnectGiverUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectGiverUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CareConnect;
+				TEST_TARGET_NAME = CareConnectGiver;
 			};
 			name = Debug;
 		};
-		EA644BB12227377D008A0D22 /* Release */ = {
+		EA644C2522273D89008A0D22 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 993G373D9B;
-				INFOPLIST_FILE = CareConnectUITests/Info.plist;
+				INFOPLIST_FILE = CareConnectGiverUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectUITests;
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectGiverUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = CareConnect;
+				TEST_TARGET_NAME = CareConnectGiver;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		EA644B7C2227377B008A0D22 /* Build configuration list for PBXProject "CareConnect" */ = {
+		EA644BF022273D89008A0D22 /* Build configuration list for PBXProject "CareConnectGiver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA644BA72227377D008A0D22 /* Debug */,
-				EA644BA82227377D008A0D22 /* Release */,
+				EA644C1B22273D89008A0D22 /* Debug */,
+				EA644C1C22273D89008A0D22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA644BA92227377D008A0D22 /* Build configuration list for PBXNativeTarget "CareConnect" */ = {
+		EA644C1D22273D89008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectGiver" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA644BAA2227377D008A0D22 /* Debug */,
-				EA644BAB2227377D008A0D22 /* Release */,
+				EA644C1E22273D89008A0D22 /* Debug */,
+				EA644C1F22273D89008A0D22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA644BAC2227377D008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectTests" */ = {
+		EA644C2022273D89008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectGiverTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA644BAD2227377D008A0D22 /* Debug */,
-				EA644BAE2227377D008A0D22 /* Release */,
+				EA644C2122273D89008A0D22 /* Debug */,
+				EA644C2222273D89008A0D22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EA644BAF2227377D008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectUITests" */ = {
+		EA644C2322273D89008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectGiverUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				EA644BB02227377D008A0D22 /* Debug */,
-				EA644BB12227377D008A0D22 /* Release */,
+				EA644C2422273D89008A0D22 /* Debug */,
+				EA644C2522273D89008A0D22 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = EA644B792227377B008A0D22 /* Project object */;
+	rootObject = EA644BED22273D89008A0D22 /* Project object */;
 }

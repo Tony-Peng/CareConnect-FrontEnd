@@ -1,15 +1,15 @@
 //
-//  CareConnectTests.swift
-//  CareConnectTests
+//  CareConnectGiverTests.swift
+//  CareConnectGiverTests
 //
 //  Created by Tony on 2/27/19.
 //  Copyright © 2019 Tony. All rights reserved.
 //
 
 import XCTest
-@testable import CareConnect
+@testable import CareConnectGiver
 
-class CareConnectTests: XCTestCase {
+class CareConnectGiverTests: XCTestCase {
 
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.

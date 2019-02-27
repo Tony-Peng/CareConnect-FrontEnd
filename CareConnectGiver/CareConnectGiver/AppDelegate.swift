@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  CareConnect
+//  CareConnectGiver
 //
 //  Created by Tony on 2/27/19.
 //  Copyright © 2019 Tony. All rights reserved.
