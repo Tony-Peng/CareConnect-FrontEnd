@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA644BBF22273B39008A0D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BBE22273B39008A0D22 /* AppDelegate.swift */; };
+		EA644BC122273B39008A0D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BC022273B39008A0D22 /* ViewController.swift */; };
+		EA644BC422273B39008A0D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA644BC222273B39008A0D22 /* Main.storyboard */; };
+		EA644BC622273B3A008A0D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA644BC522273B3A008A0D22 /* Assets.xcassets */; };
+		EA644BC922273B3A008A0D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA644BC722273B3A008A0D22 /* LaunchScreen.storyboard */; };
+		EA644BD422273B3A008A0D22 /* CareConnectFamilyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BD322273B3A008A0D22 /* CareConnectFamilyTests.swift */; };
+		EA644BDF22273B3A008A0D22 /* CareConnectFamilyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BDE22273B3A008A0D22 /* CareConnectFamilyUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA644BD022273B3A008A0D22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA644BB322273B39008A0D22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA644BBA22273B39008A0D22;
+			remoteInfo = CareConnectFamily;
+		};
+		EA644BDB22273B3A008A0D22 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA644BB322273B39008A0D22 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA644BBA22273B39008A0D22;
+			remoteInfo = CareConnectFamily;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EA644BBB22273B39008A0D22 /* CareConnectFamily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareConnectFamily.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA644BBE22273B39008A0D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EA644BC022273B39008A0D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EA644BC322273B39008A0D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EA644BC522273B3A008A0D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EA644BC822273B3A008A0D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA644BCA22273B3A008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA644BCF22273B3A008A0D22 /* CareConnectFamilyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareConnectFamilyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA644BD322273B3A008A0D22 /* CareConnectFamilyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectFamilyTests.swift; sourceTree = "<group>"; };
+		EA644BD522273B3A008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA644BDA22273B3A008A0D22 /* CareConnectFamilyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareConnectFamilyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA644BDE22273B3A008A0D22 /* CareConnectFamilyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectFamilyUITests.swift; sourceTree = "<group>"; };
+		EA644BE022273B3A008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA644BB822273B39008A0D22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA644BCC22273B3A008A0D22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA644BD722273B3A008A0D22 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA644BB222273B39008A0D22 = {
+			isa = PBXGroup;
+			children = (
+				EA644BBD22273B39008A0D22 /* CareConnectFamily */,
+				EA644BD222273B3A008A0D22 /* CareConnectFamilyTests */,
+				EA644BDD22273B3A008A0D22 /* CareConnectFamilyUITests */,
+				EA644BBC22273B39008A0D22 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA644BBC22273B39008A0D22 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA644BBB22273B39008A0D22 /* CareConnectFamily.app */,
+				EA644BCF22273B3A008A0D22 /* CareConnectFamilyTests.xctest */,
+				EA644BDA22273B3A008A0D22 /* CareConnectFamilyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA644BBD22273B39008A0D22 /* CareConnectFamily */ = {
+			isa = PBXGroup;
+			children = (
+				EA644BBE22273B39008A0D22 /* AppDelegate.swift */,
+				EA644BC022273B39008A0D22 /* ViewController.swift */,
+				EA644BC222273B39008A0D22 /* Main.storyboard */,
+				EA644BC522273B3A008A0D22 /* Assets.xcassets */,
+				EA644BC722273B3A008A0D22 /* LaunchScreen.storyboard */,
+				EA644BCA22273B3A008A0D22 /* Info.plist */,
+			);
+			path = CareConnectFamily;
+			sourceTree = "<group>";
+		};
+		EA644BD222273B3A008A0D22 /* CareConnectFamilyTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA644BD322273B3A008A0D22 /* CareConnectFamilyTests.swift */,
+				EA644BD522273B3A008A0D22 /* Info.plist */,
+			);
+			path = CareConnectFamilyTests;
+			sourceTree = "<group>";
+		};
+		EA644BDD22273B3A008A0D22 /* CareConnectFamilyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EA644BDE22273B3A008A0D22 /* CareConnectFamilyUITests.swift */,
+				EA644BE022273B3A008A0D22 /* Info.plist */,
+			);
+			path = CareConnectFamilyUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EA644BBA22273B39008A0D22 /* CareConnectFamily */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA644BE322273B3A008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectFamily" */;
+			buildPhases = (
+				EA644BB722273B39008A0D22 /* Sources */,
+				EA644BB822273B39008A0D22 /* Frameworks */,
+				EA644BB922273B39008A0D22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CareConnectFamily;
+			productName = CareConnectFamily;
+			productReference = EA644BBB22273B39008A0D22 /* CareConnectFamily.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EA644BCE22273B3A008A0D22 /* CareConnectFamilyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA644BE622273B3A008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectFamilyTests" */;
+			buildPhases = (
+				EA644BCB22273B3A008A0D22 /* Sources */,
+				EA644BCC22273B3A008A0D22 /* Frameworks */,
+				EA644BCD22273B3A008A0D22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA644BD122273B3A008A0D22 /* PBXTargetDependency */,
+			);
+			name = CareConnectFamilyTests;
+			productName = CareConnectFamilyTests;
+			productReference = EA644BCF22273B3A008A0D22 /* CareConnectFamilyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EA644BD922273B3A008A0D22 /* CareConnectFamilyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA644BE922273B3A008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectFamilyUITests" */;
+			buildPhases = (
+				EA644BD622273B3A008A0D22 /* Sources */,
+				EA644BD722273B3A008A0D22 /* Frameworks */,
+				EA644BD822273B3A008A0D22 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA644BDC22273B3A008A0D22 /* PBXTargetDependency */,
+			);
+			name = CareConnectFamilyUITests;
+			productName = CareConnectFamilyUITests;
+			productReference = EA644BDA22273B3A008A0D22 /* CareConnectFamilyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA644BB322273B39008A0D22 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Tony;
+				TargetAttributes = {
+					EA644BBA22273B39008A0D22 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EA644BCE22273B3A008A0D22 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EA644BBA22273B39008A0D22;
+					};
+					EA644BD922273B3A008A0D22 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EA644BBA22273B39008A0D22;
+					};
+				};
+			};
+			buildConfigurationList = EA644BB622273B39008A0D22 /* Build configuration list for PBXProject "CareConnectFamily" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EA644BB222273B39008A0D22;
+			productRefGroup = EA644BBC22273B39008A0D22 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA644BBA22273B39008A0D22 /* CareConnectFamily */,
+				EA644BCE22273B3A008A0D22 /* CareConnectFamilyTests */,
+				EA644BD922273B3A008A0D22 /* CareConnectFamilyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA644BB922273B39008A0D22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA644BC922273B3A008A0D22 /* LaunchScreen.storyboard in Resources */,
+				EA644BC622273B3A008A0D22 /* Assets.xcassets in Resources */,
+				EA644BC422273B39008A0D22 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA644BCD22273B3A008A0D22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA644BD822273B3A008A0D22 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA644BB722273B39008A0D22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA644BC122273B39008A0D22 /* ViewController.swift in Sources */,
+				EA644BBF22273B39008A0D22 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA644BCB22273B3A008A0D22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA644BD422273B3A008A0D22 /* CareConnectFamilyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA644BD622273B3A008A0D22 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA644BDF22273B3A008A0D22 /* CareConnectFamilyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA644BD122273B3A008A0D22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA644BBA22273B39008A0D22 /* CareConnectFamily */;
+			targetProxy = EA644BD022273B3A008A0D22 /* PBXContainerItemProxy */;
+		};
+		EA644BDC22273B3A008A0D22 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA644BBA22273B39008A0D22 /* CareConnectFamily */;
+			targetProxy = EA644BDB22273B3A008A0D22 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA644BC222273B39008A0D22 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA644BC322273B39008A0D22 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EA644BC722273B3A008A0D22 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA644BC822273B3A008A0D22 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA644BE122273B3A008A0D22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EA644BE222273B3A008A0D22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA644BE422273B3A008A0D22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 993G373D9B;
+				INFOPLIST_FILE = CareConnectFamily/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectFamily;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EA644BE522273B3A008A0D22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 993G373D9B;
+				INFOPLIST_FILE = CareConnectFamily/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectFamily;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EA644BE722273B3A008A0D22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 993G373D9B;
+				INFOPLIST_FILE = CareConnectFamilyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectFamilyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareConnectFamily.app/CareConnectFamily";
+			};
+			name = Debug;
+		};
+		EA644BE822273B3A008A0D22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 993G373D9B;
+				INFOPLIST_FILE = CareConnectFamilyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectFamilyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareConnectFamily.app/CareConnectFamily";
+			};
+			name = Release;
+		};
+		EA644BEA22273B3A008A0D22 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 993G373D9B;
+				INFOPLIST_FILE = CareConnectFamilyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectFamilyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CareConnectFamily;
+			};
+			name = Debug;
+		};
+		EA644BEB22273B3A008A0D22 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 993G373D9B;
+				INFOPLIST_FILE = CareConnectFamilyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSVC.CareConnectFamilyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CareConnectFamily;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA644BB622273B39008A0D22 /* Build configuration list for PBXProject "CareConnectFamily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA644BE122273B3A008A0D22 /* Debug */,
+				EA644BE222273B3A008A0D22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA644BE322273B3A008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectFamily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA644BE422273B3A008A0D22 /* Debug */,
+				EA644BE522273B3A008A0D22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA644BE622273B3A008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectFamilyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA644BE722273B3A008A0D22 /* Debug */,
+				EA644BE822273B3A008A0D22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA644BE922273B3A008A0D22 /* Build configuration list for PBXNativeTarget "CareConnectFamilyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA644BEA22273B3A008A0D22 /* Debug */,
+				EA644BEB22273B3A008A0D22 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA644BB322273B39008A0D22 /* Project object */;
+}
