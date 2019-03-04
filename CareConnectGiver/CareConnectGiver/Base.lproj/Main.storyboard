@@ -85,6 +85,26 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Show more ..."/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="checkup" translatesAutoresizingMaskIntoConstraints="NO" id="db9-ga-e7b">
+                                <rect key="frame" x="33" y="158" width="52" height="53"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="games" translatesAutoresizingMaskIntoConstraints="NO" id="Z50-kT-eF6">
+                                <rect key="frame" x="100" y="158" width="54" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="med" translatesAutoresizingMaskIntoConstraints="NO" id="zyz-rF-Fy6">
+                                <rect key="frame" x="170" y="158" width="54" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="park" translatesAutoresizingMaskIntoConstraints="NO" id="QH5-dj-KCq">
+                                <rect key="frame" x="243" y="158" width="54" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shower" translatesAutoresizingMaskIntoConstraints="NO" id="Mav-iI-wyq">
+                                <rect key="frame" x="313" y="158" width="54" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="GkX-F3-Y2w"/>
@@ -93,7 +113,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhh-UW-yvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="lHi-Gr-CgG" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-94" y="-197"/>
+            <point key="canvasLocation" x="-95.200000000000003" y="-197.45127436281859"/>
         </scene>
         <!--Note View Controller-->
         <scene sceneID="Cum-tS-gAS">
@@ -167,4 +187,11 @@
             <point key="canvasLocation" x="-1518" y="-196"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="checkup" width="30" height="32"/>
+        <image name="games" width="39" height="38"/>
+        <image name="med" width="30" height="34"/>
+        <image name="park" width="36" height="34"/>
+        <image name="shower" width="33" height="35"/>
+    </resources>
 </document>
