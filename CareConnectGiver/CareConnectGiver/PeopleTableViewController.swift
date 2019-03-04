@@ -42,7 +42,20 @@ class PeopleTableViewController: UITableViewController {
         return cell
     }
     
+    @IBAction func cancel(segue:UIStoryboardSegue) {
+        
+    }
+    
 
+    @IBAction func done(segue:UIStoryboardSegue) {
+       //  let carDetailVC = segue.source as! PeopleDetailViewController
+       /*
+        newCar = carDetailVC.name
+        
+        cars.append(newCar)
+        tableView.reloadData()
+         */
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

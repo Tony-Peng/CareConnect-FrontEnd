@@ -16,6 +16,7 @@
 		EA644C1922273D89008A0D22 /* CareConnectGiverUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644C1822273D89008A0D22 /* CareConnectGiverUITests.swift */; };
 		EAFC405B222CA2BA006071E5 /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC405A222CA2BA006071E5 /* PeopleTableViewController.swift */; };
 		EAFC405D222CA387006071E5 /* PeopleDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC405C222CA387006071E5 /* PeopleDetailViewController.swift */; };
+		EAFC405F222CD7E1006071E5 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFC405E222CD7E1006071E5 /* NoteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		EA644C1A22273D89008A0D22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAFC405A222CA2BA006071E5 /* PeopleTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		EAFC405C222CA387006071E5 /* PeopleDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleDetailViewController.swift; sourceTree = "<group>"; };
+		EAFC405E222CD7E1006071E5 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				EA644BF822273D89008A0D22 /* AppDelegate.swift */,
 				EA644BFA22273D89008A0D22 /* ViewController.swift */,
 				EA644BFC22273D89008A0D22 /* Main.storyboard */,
+				EAFC405E222CD7E1006071E5 /* NoteViewController.swift */,
 				EAFC405C222CA387006071E5 /* PeopleDetailViewController.swift */,
 				EA644BFF22273D89008A0D22 /* Assets.xcassets */,
 				EA644C0122273D89008A0D22 /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 				EAFC405D222CA387006071E5 /* PeopleDetailViewController.swift in Sources */,
 				EA644BFB22273D89008A0D22 /* ViewController.swift in Sources */,
 				EAFC405B222CA2BA006071E5 /* PeopleTableViewController.swift in Sources */,
+				EAFC405F222CD7E1006071E5 /* NoteViewController.swift in Sources */,
 				EA644BF922273D89008A0D22 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

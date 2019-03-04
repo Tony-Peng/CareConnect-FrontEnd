@@ -1,5 +1,5 @@
 //
-//  PeopleDetailViewController.swift
+//  NoteViewController.swift
 //  CareConnectGiver
 //
 //  Created by Tony on 3/3/19.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PeopleDetailViewController: UIViewController {
+class NoteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,17 +17,9 @@ class PeopleDetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "doneSegue" {
-           // name = carName.text!
+        if segue.identifier == "doneSegueNote" {
+            // name = carName.text!
         }
-    }
-    @IBAction func cancel(segue:UIStoryboardSegue) {
-        
-    }
-    
-    
-    @IBAction func done(segue:UIStoryboardSegue) {
-    
     }
     /*
     // MARK: - Navigation
