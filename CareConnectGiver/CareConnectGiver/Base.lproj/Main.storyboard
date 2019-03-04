@@ -42,10 +42,10 @@
             </objects>
             <point key="canvasLocation" x="-809" y="-197"/>
         </scene>
-        <!--View Controller-->
+        <!--People Detail View Controller-->
         <scene sceneID="1KN-Xm-4fH">
             <objects>
-                <viewController id="zfM-SP-YrT" sceneMemberID="viewController">
+                <viewController id="zfM-SP-YrT" customClass="PeopleDetailViewController" customModule="CareConnectGiver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4dj-hd-SWz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -95,10 +95,10 @@
             </objects>
             <point key="canvasLocation" x="-94" y="-197"/>
         </scene>
-        <!--View Controller-->
+        <!--Note View Controller-->
         <scene sceneID="Cum-tS-gAS">
             <objects>
-                <viewController id="zj3-up-4GD" sceneMemberID="viewController">
+                <viewController id="zj3-up-4GD" customClass="NoteViewController" customModule="CareConnectGiver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3UD-RE-qzz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

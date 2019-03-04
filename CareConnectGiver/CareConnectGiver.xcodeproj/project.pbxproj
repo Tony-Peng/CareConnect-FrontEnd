@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		EA644BF922273D89008A0D22 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BF822273D89008A0D22 /* AppDelegate.swift */; };
-		EA644BFB22273D89008A0D22 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA644BFA22273D89008A0D22 /* ViewController.swift */; };
 		EA644BFE22273D89008A0D22 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA644BFC22273D89008A0D22 /* Main.storyboard */; };
 		EA644C0022273D89008A0D22 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA644BFF22273D89008A0D22 /* Assets.xcassets */; };
 		EA644C0322273D89008A0D22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA644C0122273D89008A0D22 /* LaunchScreen.storyboard */; };
@@ -39,7 +38,6 @@
 /* Begin PBXFileReference section */
 		EA644BF522273D89008A0D22 /* CareConnectGiver.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareConnectGiver.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA644BF822273D89008A0D22 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EA644BFA22273D89008A0D22 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EA644BFD22273D89008A0D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EA644BFF22273D89008A0D22 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA644C0222273D89008A0D22 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 			isa = PBXGroup;
 			children = (
 				EA644BF822273D89008A0D22 /* AppDelegate.swift */,
-				EA644BFA22273D89008A0D22 /* ViewController.swift */,
 				EA644BFC22273D89008A0D22 /* Main.storyboard */,
 				EAFC405E222CD7E1006071E5 /* NoteViewController.swift */,
 				EAFC405C222CA387006071E5 /* PeopleDetailViewController.swift */,
@@ -266,7 +263,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFC405D222CA387006071E5 /* PeopleDetailViewController.swift in Sources */,
-				EA644BFB22273D89008A0D22 /* ViewController.swift in Sources */,
 				EAFC405B222CA2BA006071E5 /* PeopleTableViewController.swift in Sources */,
 				EAFC405F222CD7E1006071E5 /* NoteViewController.swift in Sources */,
 				EA644BF922273D89008A0D22 /* AppDelegate.swift in Sources */,
