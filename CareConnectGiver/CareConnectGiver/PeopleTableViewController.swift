@@ -6,14 +6,33 @@
 //  Copyright © 2019 Tony. All rights reserved.
 //
 
+import Alamofire
 import UIKit
+import SwiftyJSON
 
 class PeopleTableViewController: UITableViewController {
     var people = [String]()
-    var newPeople: String = " "
+    var peopleIds = [Int]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        people = ["Francis Horton", "Ness Zhang"]
+//        CareConnectService.getElderlies() { (response, error) in
+//            response?.forEach{print($0)}
+//        }
+        Alamofire.request("https://mas-care-connect.herokuapp.com/elderlies/", method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let result):
+                let json = JSON(result)
+                for (_,v) in json {
+                    print(v)
+                    let s = v["name"].string!
+                    self.people.append(s)
+                    self.peopleIds.append(v["id"].int!)
+                }
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,6 +61,14 @@ class PeopleTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let DvC = Storyboard.instantiateViewController(withIdentifier: "PeopleDetailViewController") as! PeopleDetailViewController
+        
+        DvC.getname = people[indexPath.row]
+        DvC.getId = peopleIds[indexPath.row]
+        self.navigationController?.pushViewController(DvC, animated: true)
+    }
     @IBAction func cancel(segue:UIStoryboardSegue) {
         
     }

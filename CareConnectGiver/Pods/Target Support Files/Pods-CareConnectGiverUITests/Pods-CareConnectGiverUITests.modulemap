@@ -1,0 +1,6 @@
+framework module Pods_CareConnectGiverUITests {
+  umbrella header "Pods-CareConnectGiverUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
