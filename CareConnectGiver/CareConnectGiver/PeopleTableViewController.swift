@@ -6,14 +6,31 @@
 //  Copyright © 2019 Tony. All rights reserved.
 //
 
+import Alamofire
 import UIKit
+import SwiftyJSON
 
 class PeopleTableViewController: UITableViewController {
     var people = [String]()
     var newPeople: String = " "
     override func viewDidLoad() {
         super.viewDidLoad()
-        people = ["Francis Horton", "Ness Zhang"]
+//        CareConnectService.getElderlies() { (response, error) in
+//            response?.forEach{print($0)}
+//        }
+        Alamofire.request("https://mas-care-connect.herokuapp.com/elderlies/", method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let result):
+                let json = JSON(result)
+                for (_,v) in json {
+                    let s = v["name"].string!
+                    self.people.append(s)
+                }
+                self.tableView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
