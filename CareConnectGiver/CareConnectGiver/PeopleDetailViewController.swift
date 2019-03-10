@@ -12,9 +12,15 @@ class PeopleDetailViewController: UIViewController {
     var getname = String()
     
     @IBOutlet weak var elderlyName: UILabel!
+    @IBOutlet weak var showerButton: UIButton!
+    @IBAction func showerAction(_ sender: UIButton) {
+        print("HELLO")
+        performSegue(withIdentifier: "newActivity", sender: self)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("HERE" + getname)
+        let showerImage = #imageLiteral(resourceName: "shower")
+        showerButton.setImage(showerImage, for: [])
         elderlyName.textAlignment = NSTextAlignment.center
         elderlyName.text! = getname
         // Do any additional setup after loading the view.

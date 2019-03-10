@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1965091722346AC8007F8A5E /* CareConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965091622346AC8007F8A5E /* CareConnectService.swift */; };
+		19E7476E2234DEC000D56062 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19E7476D2234DEC000D56062 /* ActivityViewController.swift */; };
 		2623A72D6D61995BCBA2E29E /* Pods_CareConnectGiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDDF392FEDB636311C45C1 /* Pods_CareConnectGiver.framework */; };
 		94F434B20911FEAA06E8A109 /* Pods_CareConnectGiverTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D78AD868E4DDCE2E40D845B /* Pods_CareConnectGiverTests.framework */; };
 		D04D63FD4F26D0071224E13C /* Pods_CareConnectGiverUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6234B451B8673BE31A1A7DA /* Pods_CareConnectGiverUITests.framework */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		1965091622346AC8007F8A5E /* CareConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectService.swift; sourceTree = "<group>"; };
+		19E7476D2234DEC000D56062 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
 		29CB4D19138F5825863BA7BB /* Pods-CareConnectGiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectGiver.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectGiver/Pods-CareConnectGiver.release.xcconfig"; sourceTree = "<group>"; };
 		2D78AD868E4DDCE2E40D845B /* Pods_CareConnectGiverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareConnectGiverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5CCDDF392FEDB636311C45C1 /* Pods_CareConnectGiver.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareConnectGiver.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +147,7 @@
 			children = (
 				EA644BF822273D89008A0D22 /* AppDelegate.swift */,
 				EA644BFC22273D89008A0D22 /* Main.storyboard */,
+				19E7476D2234DEC000D56062 /* ActivityViewController.swift */,
 				EAFC405E222CD7E1006071E5 /* NoteViewController.swift */,
 				EAFC405C222CA387006071E5 /* PeopleDetailViewController.swift */,
 				EA644BFF22273D89008A0D22 /* Assets.xcassets */,
@@ -403,6 +406,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EAFC405D222CA387006071E5 /* PeopleDetailViewController.swift in Sources */,
+				19E7476E2234DEC000D56062 /* ActivityViewController.swift in Sources */,
 				EAFC405B222CA2BA006071E5 /* PeopleTableViewController.swift in Sources */,
 				1965091722346AC8007F8A5E /* CareConnectService.swift in Sources */,
 				EAFC405F222CD7E1006071E5 /* NoteViewController.swift in Sources */,
