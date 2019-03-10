@@ -9,10 +9,14 @@
 import UIKit
 
 class PeopleDetailViewController: UIViewController {
-
+    var getname = String()
+    
+    @IBOutlet weak var elderlyName: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("HERE" + getname)
+        elderlyName.textAlignment = NSTextAlignment.center
+        elderlyName.text! = getname
         // Do any additional setup after loading the view.
     }
     

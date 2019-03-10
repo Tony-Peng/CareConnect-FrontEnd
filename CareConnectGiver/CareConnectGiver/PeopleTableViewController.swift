@@ -12,7 +12,6 @@ import SwiftyJSON
 
 class PeopleTableViewController: UITableViewController {
     var people = [String]()
-    var newPeople: String = " "
     override func viewDidLoad() {
         super.viewDidLoad()
 //        CareConnectService.getElderlies() { (response, error) in
@@ -59,6 +58,13 @@ class PeopleTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let DvC = Storyboard.instantiateViewController(withIdentifier: "PeopleDetailViewController") as! PeopleDetailViewController
+        
+        DvC.getname = people[indexPath.row]
+        self.navigationController?.pushViewController(DvC, animated: true)
+    }
     @IBAction func cancel(segue:UIStoryboardSegue) {
         
     }
