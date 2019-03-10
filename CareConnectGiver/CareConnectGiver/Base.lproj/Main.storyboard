@@ -99,7 +99,7 @@
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="showerAction:" destination="zfM-SP-YrT" eventType="touchUpInside" id="iSj-8w-Hbm"/>
+                                    <action selector="showerAction:" destination="zfM-SP-YrT" eventType="touchUpInside" id="lzY-c4-ash"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hTl-0x-erT">
@@ -114,7 +114,6 @@
                     <connections>
                         <outlet property="elderlyName" destination="Vv8-Ka-gOZ" id="aWA-Oq-8qq"/>
                         <outlet property="showerButton" destination="Sgt-To-U7P" id="Lhd-K0-002"/>
-                        <segue destination="XG8-GV-OE8" kind="show" identifier="newActivity" id="PMQ-16-tW8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhh-UW-yvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -210,6 +209,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="yr2-WH-mja"/>
                     </view>
+                    <connections>
+                        <outlet property="durationPicker" destination="khv-KI-nOQ" id="nsj-5q-i10"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWE-lx-xLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

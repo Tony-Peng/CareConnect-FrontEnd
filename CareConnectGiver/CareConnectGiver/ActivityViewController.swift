@@ -6,19 +6,41 @@
 //  Copyright © 2019 Tony. All rights reserved.
 //
 
+import Alamofire
+import SwiftyJSON
 import UIKit
 
 class ActivityViewController: UIViewController {
-
+    
+    var getElderlyId = Int()
+    var getActivityType = Int()
     @IBOutlet weak var durationPicker: UIDatePicker!
     @IBAction func submitActivity(_ sender: Any) {
+        let parameters = [
+            "duration": durationPicker.countDownDuration,
+            "activityType" : getActivityType,
+            "elderly" : getElderlyId,
+            "caretaker" : 1
+            ] as [String : Any]
+
+        let url = "https://mas-care-connect.herokuapp.com/activities/"
+        Alamofire.request(url, method:.post, parameters:parameters,encoding: JSONEncoding.default).responseJSON { response in
+            switch response.result {
+            case .success:
+                print(response)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UIDatePicker.Mode.countDownTimer
+        durationPicker.countDownDuration = 60
+        print("In viewDidLoad ")
+        print(getElderlyId)
         // Do any additional setup after loading the view.
     }
-    
 
     /*
     // MARK: - Navigation

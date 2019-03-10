@@ -12,6 +12,7 @@ import SwiftyJSON
 
 class PeopleTableViewController: UITableViewController {
     var people = [String]()
+    var peopleIds = [Int]()
     override func viewDidLoad() {
         super.viewDidLoad()
 //        CareConnectService.getElderlies() { (response, error) in
@@ -22,8 +23,10 @@ class PeopleTableViewController: UITableViewController {
             case .success(let result):
                 let json = JSON(result)
                 for (_,v) in json {
+                    print(v)
                     let s = v["name"].string!
                     self.people.append(s)
+                    self.peopleIds.append(v["id"].int!)
                 }
                 self.tableView.reloadData()
             case .failure(let error):
@@ -63,6 +66,7 @@ class PeopleTableViewController: UITableViewController {
         let DvC = Storyboard.instantiateViewController(withIdentifier: "PeopleDetailViewController") as! PeopleDetailViewController
         
         DvC.getname = people[indexPath.row]
+        DvC.getId = peopleIds[indexPath.row]
         self.navigationController?.pushViewController(DvC, animated: true)
     }
     @IBAction func cancel(segue:UIStoryboardSegue) {

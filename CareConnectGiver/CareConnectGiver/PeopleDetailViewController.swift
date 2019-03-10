@@ -10,13 +10,11 @@ import UIKit
 
 class PeopleDetailViewController: UIViewController {
     var getname = String()
+    var getId = Int()
     
     @IBOutlet weak var elderlyName: UILabel!
     @IBOutlet weak var showerButton: UIButton!
-    @IBAction func showerAction(_ sender: UIButton) {
-        print("HELLO")
-        performSegue(withIdentifier: "newActivity", sender: self)
-    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let showerImage = #imageLiteral(resourceName: "shower")
@@ -27,14 +25,21 @@ class PeopleDetailViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "doneSegue" {
-           // name = carName.text!
-        }
+
     }
     @IBAction func cancel(segue:UIStoryboardSegue) {
         
     }
     
+    @IBAction func showerAction(_ sender: Any) {
+        print("preparing")
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destinationVC = Storyboard.instantiateViewController(withIdentifier: "ActivityViewController") as! ActivityViewController
+        destinationVC.getElderlyId = getId
+        //TODO: THis is hardcoded to shower
+        destinationVC.getActivityType = 1
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
     
     @IBAction func done(segue:UIStoryboardSegue) {
     
