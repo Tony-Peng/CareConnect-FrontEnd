@@ -10,17 +10,42 @@ import Alamofire
 import SwiftyJSON
 import UIKit
 
+struct Activity {
+    let name: String
+    let date: NSDate
+}
+
 class ActivityViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var todayTable: UITableView!
     @IBOutlet weak var yesterdayTable: UITableView!
     var todayData = [String]()
+    
+    @IBAction func refreshButtonPressed(_ sender: Any) {
+        Alamofire.request("https://mas-care-connect.herokuapp.com/activities/?elderly=1", method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let result):
+                self.todayData.removeAll()
+                let json = JSON(result)
+                for (_,v) in json {
+                    let activityId = v["activityType"].int!
+                    let msg = self.map[activityId]! + " for " + v["duration"].string!
+                    self.todayData.append(msg)
+                }
+                self.todayTable.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
+        
+    }
     let map = [
         1: "Took a shower",
         2: "Went to the park"
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         todayTable.dataSource = self
         todayTable.delegate = self
         todayTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")

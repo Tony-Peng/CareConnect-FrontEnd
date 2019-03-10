@@ -46,7 +46,13 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="LAv-ha-Y0G"/>
                     </view>
-                    <navigationItem key="navigationItem" id="vfF-gO-rJl"/>
+                    <navigationItem key="navigationItem" id="vfF-gO-rJl">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="cuV-Ks-bKo">
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="LLL-JY-wdk" id="yrd-3E-bWV"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="todayTable" destination="EOf-vv-DHR" id="ADC-Bj-d1h"/>
                         <outlet property="yesterdayTable" destination="aR6-Xj-kHm" id="OkP-vQ-nyf"/>
