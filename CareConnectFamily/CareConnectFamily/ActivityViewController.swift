@@ -11,17 +11,34 @@ import SwiftyJSON
 import UIKit
 
 struct Activity {
-    let name: String
-    let date: NSDate
+    let desc: String
+    let date: Date
 }
 
 class ActivityViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var todayTable: UITableView!
     @IBOutlet weak var yesterdayTable: UITableView!
-    var todayData = [String]()
+    var todayData = [Activity]()
+    let dateFormatter = DateFormatter()
     
     @IBAction func refreshButtonPressed(_ sender: Any) {
+        makeActivityRequest()
+    }
+    let map = [
+        1: "Took a shower",
+        2: "Went to the park"
+    ]
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        todayTable.dataSource = self
+        todayTable.delegate = self
+        todayTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        makeActivityRequest()
+        
+    }
+    func makeActivityRequest() {
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
         Alamofire.request("https://mas-care-connect.herokuapp.com/activities/?elderly=1", method: .get).responseJSON { response in
             switch response.result {
             case .success(let result):
@@ -30,40 +47,18 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
                 for (_,v) in json {
                     let activityId = v["activityType"].int!
                     let msg = self.map[activityId]! + " for " + v["duration"].string!
-                    self.todayData.append(msg)
+                    print(String(v["date"].string!.dropLast()))
+                    let date = self.dateFormatter.date(from: String(v["date"].string!.dropLast()))
+                    let newActivity = Activity(desc: msg, date: date!)
+                    self.todayData.append(newActivity)
                 }
+                self.todayData.sort(by: { $0.date.compare($1.date) == .orderedDescending})
+                print(self.todayData)
                 self.todayTable.reloadData()
             case .failure(let error):
                 print(error)
             }
         }
-        
-    }
-    let map = [
-        1: "Took a shower",
-        2: "Went to the park"
-    ]
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        todayTable.dataSource = self
-        todayTable.delegate = self
-        todayTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        Alamofire.request("https://mas-care-connect.herokuapp.com/activities/?elderly=1", method: .get).responseJSON { response in
-            switch response.result {
-            case .success(let result):
-                let json = JSON(result)
-                for (_,v) in json {
-                    let activityId = v["activityType"].int!
-                    let msg = self.map[activityId]! + " for " + v["duration"].string!
-                    self.todayData.append(msg)
-                }
-                self.todayTable.reloadData()
-            case .failure(let error):
-                print(error)
-            }
-        }
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -82,7 +77,7 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if tableView == self.todayTable {
             cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
-            let previewDetail = todayData[indexPath.row]
+            let previewDetail = todayData[indexPath.row].desc
             cell!.textLabel!.text = previewDetail
             
         }
