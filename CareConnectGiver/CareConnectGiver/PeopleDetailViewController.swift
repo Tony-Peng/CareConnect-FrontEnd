@@ -12,13 +12,21 @@ class PeopleDetailViewController: UIViewController {
     var getname = String()
     var getId = Int()
     
+    let map = [
+        "shower": 1,
+        "park": 2
+    ]
+    
     @IBOutlet weak var elderlyName: UILabel!
     @IBOutlet weak var showerButton: UIButton!
-
+    @IBOutlet weak var parkButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         let showerImage = #imageLiteral(resourceName: "shower")
         showerButton.setImage(showerImage, for: [])
+        let parkImage = #imageLiteral(resourceName: "park")
+        parkButton.setImage(parkImage, for: [])
         elderlyName.textAlignment = NSTextAlignment.center
         elderlyName.text! = getname
         // Do any additional setup after loading the view.
@@ -32,15 +40,21 @@ class PeopleDetailViewController: UIViewController {
     }
     
     @IBAction func showerAction(_ sender: Any) {
-        print("preparing")
+        createNewActivity(activityType: "shower")
+    }
+    
+    func createNewActivity(activityType: String) {
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destinationVC = Storyboard.instantiateViewController(withIdentifier: "ActivityViewController") as! ActivityViewController
         destinationVC.getElderlyId = getId
         //TODO: THis is hardcoded to shower
-        destinationVC.getActivityType = 1
+        destinationVC.getActivityType = map[activityType]!
         self.navigationController?.pushViewController(destinationVC, animated: true)
     }
     
+    @IBAction func parkAction(_ sender: Any) {
+        createNewActivity(activityType: "park")
+    }
     @IBAction func done(segue:UIStoryboardSegue) {
     
     }

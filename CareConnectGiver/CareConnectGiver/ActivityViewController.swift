@@ -32,6 +32,7 @@ class ActivityViewController: UIViewController {
                 print(error)
             }
         }
+        _ = navigationController?.popViewController(animated: true)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
