@@ -1,0 +1,734 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0948650F5E928CDF159B18EA /* Pods_CareConnectFamily.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB678AA0D60205A6C2AD3721 /* Pods_CareConnectFamily.framework */; };
+		194F0CF82235ABAB00E55CD1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F0CF72235ABAB00E55CD1 /* AppDelegate.swift */; };
+		194F0CFD2235ABAB00E55CD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F0CFB2235ABAB00E55CD1 /* Main.storyboard */; };
+		194F0CFF2235ABAD00E55CD1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 194F0CFE2235ABAD00E55CD1 /* Assets.xcassets */; };
+		194F0D022235ABAD00E55CD1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 194F0D002235ABAD00E55CD1 /* LaunchScreen.storyboard */; };
+		194F0D0D2235ABAD00E55CD1 /* CareConnectFamilyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F0D0C2235ABAD00E55CD1 /* CareConnectFamilyTests.swift */; };
+		194F0D182235ABAD00E55CD1 /* CareConnectFamilyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F0D172235ABAD00E55CD1 /* CareConnectFamilyUITests.swift */; };
+		194F0D282235B54900E55CD1 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F0D272235B54900E55CD1 /* ActivityViewController.swift */; };
+		C216BBD5096DA2F768781364 /* Pods_CareConnectFamilyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EADA08E9AEF0E668225A29 /* Pods_CareConnectFamilyUITests.framework */; };
+		E1C8B3AF018F3CEE96140980 /* Pods_CareConnectFamilyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0422F410CDD8FB4EACB52ABA /* Pods_CareConnectFamilyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		194F0D092235ABAD00E55CD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 194F0CEC2235ABAB00E55CD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 194F0CF32235ABAB00E55CD1;
+			remoteInfo = CareConnectFamily;
+		};
+		194F0D142235ABAD00E55CD1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 194F0CEC2235ABAB00E55CD1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 194F0CF32235ABAB00E55CD1;
+			remoteInfo = CareConnectFamily;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		009DFBBC86F77803C1812AB6 /* Pods-CareConnectFamilyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamilyUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamilyUITests/Pods-CareConnectFamilyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		03EADA08E9AEF0E668225A29 /* Pods_CareConnectFamilyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareConnectFamilyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0422F410CDD8FB4EACB52ABA /* Pods_CareConnectFamilyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareConnectFamilyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		194F0CF42235ABAB00E55CD1 /* CareConnectFamily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CareConnectFamily.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		194F0CF72235ABAB00E55CD1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		194F0CFC2235ABAB00E55CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		194F0CFE2235ABAD00E55CD1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		194F0D012235ABAD00E55CD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		194F0D032235ABAD00E55CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		194F0D082235ABAD00E55CD1 /* CareConnectFamilyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareConnectFamilyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		194F0D0C2235ABAD00E55CD1 /* CareConnectFamilyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectFamilyTests.swift; sourceTree = "<group>"; };
+		194F0D0E2235ABAD00E55CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		194F0D132235ABAD00E55CD1 /* CareConnectFamilyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CareConnectFamilyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		194F0D172235ABAD00E55CD1 /* CareConnectFamilyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectFamilyUITests.swift; sourceTree = "<group>"; };
+		194F0D192235ABAD00E55CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		194F0D272235B54900E55CD1 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		38394380F0A1F2D5C8D5A8C6 /* Pods-CareConnectFamily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamily/Pods-CareConnectFamily.debug.xcconfig"; sourceTree = "<group>"; };
+		6D539530C17910366523968E /* Pods-CareConnectFamily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamily.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamily/Pods-CareConnectFamily.release.xcconfig"; sourceTree = "<group>"; };
+		926A0D3AB548F63BF0B9A56F /* Pods-CareConnectFamilyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamilyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamilyTests/Pods-CareConnectFamilyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB678AA0D60205A6C2AD3721 /* Pods_CareConnectFamily.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareConnectFamily.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0CDD1B3DE829B48DE9175F7 /* Pods-CareConnectFamilyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamilyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamilyTests/Pods-CareConnectFamilyTests.release.xcconfig"; sourceTree = "<group>"; };
+		E9C8E866DCD651253452F7DF /* Pods-CareConnectFamilyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamilyUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamilyUITests/Pods-CareConnectFamilyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		194F0CF12235ABAB00E55CD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0948650F5E928CDF159B18EA /* Pods_CareConnectFamily.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194F0D052235ABAD00E55CD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1C8B3AF018F3CEE96140980 /* Pods_CareConnectFamilyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194F0D102235ABAD00E55CD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C216BBD5096DA2F768781364 /* Pods_CareConnectFamilyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		194F0CEB2235ABAB00E55CD1 = {
+			isa = PBXGroup;
+			children = (
+				194F0CF62235ABAB00E55CD1 /* CareConnectFamily */,
+				194F0D0B2235ABAD00E55CD1 /* CareConnectFamilyTests */,
+				194F0D162235ABAD00E55CD1 /* CareConnectFamilyUITests */,
+				194F0CF52235ABAB00E55CD1 /* Products */,
+				9D1F9F72EAF0C3501BF15E2B /* Pods */,
+				8D68347D54BAF6D121794E61 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		194F0CF52235ABAB00E55CD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				194F0CF42235ABAB00E55CD1 /* CareConnectFamily.app */,
+				194F0D082235ABAD00E55CD1 /* CareConnectFamilyTests.xctest */,
+				194F0D132235ABAD00E55CD1 /* CareConnectFamilyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		194F0CF62235ABAB00E55CD1 /* CareConnectFamily */ = {
+			isa = PBXGroup;
+			children = (
+				194F0CF72235ABAB00E55CD1 /* AppDelegate.swift */,
+				194F0CFB2235ABAB00E55CD1 /* Main.storyboard */,
+				194F0D272235B54900E55CD1 /* ActivityViewController.swift */,
+				194F0CFE2235ABAD00E55CD1 /* Assets.xcassets */,
+				194F0D002235ABAD00E55CD1 /* LaunchScreen.storyboard */,
+				194F0D032235ABAD00E55CD1 /* Info.plist */,
+			);
+			path = CareConnectFamily;
+			sourceTree = "<group>";
+		};
+		194F0D0B2235ABAD00E55CD1 /* CareConnectFamilyTests */ = {
+			isa = PBXGroup;
+			children = (
+				194F0D0C2235ABAD00E55CD1 /* CareConnectFamilyTests.swift */,
+				194F0D0E2235ABAD00E55CD1 /* Info.plist */,
+			);
+			path = CareConnectFamilyTests;
+			sourceTree = "<group>";
+		};
+		194F0D162235ABAD00E55CD1 /* CareConnectFamilyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				194F0D172235ABAD00E55CD1 /* CareConnectFamilyUITests.swift */,
+				194F0D192235ABAD00E55CD1 /* Info.plist */,
+			);
+			path = CareConnectFamilyUITests;
+			sourceTree = "<group>";
+		};
+		8D68347D54BAF6D121794E61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB678AA0D60205A6C2AD3721 /* Pods_CareConnectFamily.framework */,
+				0422F410CDD8FB4EACB52ABA /* Pods_CareConnectFamilyTests.framework */,
+				03EADA08E9AEF0E668225A29 /* Pods_CareConnectFamilyUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9D1F9F72EAF0C3501BF15E2B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				38394380F0A1F2D5C8D5A8C6 /* Pods-CareConnectFamily.debug.xcconfig */,
+				6D539530C17910366523968E /* Pods-CareConnectFamily.release.xcconfig */,
+				926A0D3AB548F63BF0B9A56F /* Pods-CareConnectFamilyTests.debug.xcconfig */,
+				E0CDD1B3DE829B48DE9175F7 /* Pods-CareConnectFamilyTests.release.xcconfig */,
+				E9C8E866DCD651253452F7DF /* Pods-CareConnectFamilyUITests.debug.xcconfig */,
+				009DFBBC86F77803C1812AB6 /* Pods-CareConnectFamilyUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		194F0CF32235ABAB00E55CD1 /* CareConnectFamily */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194F0D1C2235ABAD00E55CD1 /* Build configuration list for PBXNativeTarget "CareConnectFamily" */;
+			buildPhases = (
+				1D2CD060052F791CADA80AC4 /* [CP] Check Pods Manifest.lock */,
+				194F0CF02235ABAB00E55CD1 /* Sources */,
+				194F0CF12235ABAB00E55CD1 /* Frameworks */,
+				194F0CF22235ABAB00E55CD1 /* Resources */,
+				09717A551898FBFFA9E16B15 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CareConnectFamily;
+			productName = CareConnectFamily;
+			productReference = 194F0CF42235ABAB00E55CD1 /* CareConnectFamily.app */;
+			productType = "com.apple.product-type.application";
+		};
+		194F0D072235ABAD00E55CD1 /* CareConnectFamilyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194F0D1F2235ABAD00E55CD1 /* Build configuration list for PBXNativeTarget "CareConnectFamilyTests" */;
+			buildPhases = (
+				35741FA7F3EB61542D2E1DB2 /* [CP] Check Pods Manifest.lock */,
+				194F0D042235ABAD00E55CD1 /* Sources */,
+				194F0D052235ABAD00E55CD1 /* Frameworks */,
+				194F0D062235ABAD00E55CD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				194F0D0A2235ABAD00E55CD1 /* PBXTargetDependency */,
+			);
+			name = CareConnectFamilyTests;
+			productName = CareConnectFamilyTests;
+			productReference = 194F0D082235ABAD00E55CD1 /* CareConnectFamilyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		194F0D122235ABAD00E55CD1 /* CareConnectFamilyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 194F0D222235ABAD00E55CD1 /* Build configuration list for PBXNativeTarget "CareConnectFamilyUITests" */;
+			buildPhases = (
+				5C1B7A23AA28AF58A9E5F7D4 /* [CP] Check Pods Manifest.lock */,
+				194F0D0F2235ABAD00E55CD1 /* Sources */,
+				194F0D102235ABAD00E55CD1 /* Frameworks */,
+				194F0D112235ABAD00E55CD1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				194F0D152235ABAD00E55CD1 /* PBXTargetDependency */,
+			);
+			name = CareConnectFamilyUITests;
+			productName = CareConnectFamilyUITests;
+			productReference = 194F0D132235ABAD00E55CD1 /* CareConnectFamilyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		194F0CEC2235ABAB00E55CD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Michael Chen";
+				TargetAttributes = {
+					194F0CF32235ABAB00E55CD1 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					194F0D072235ABAD00E55CD1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 194F0CF32235ABAB00E55CD1;
+					};
+					194F0D122235ABAD00E55CD1 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 194F0CF32235ABAB00E55CD1;
+					};
+				};
+			};
+			buildConfigurationList = 194F0CEF2235ABAB00E55CD1 /* Build configuration list for PBXProject "CareConnectFamily" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 194F0CEB2235ABAB00E55CD1;
+			productRefGroup = 194F0CF52235ABAB00E55CD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				194F0CF32235ABAB00E55CD1 /* CareConnectFamily */,
+				194F0D072235ABAD00E55CD1 /* CareConnectFamilyTests */,
+				194F0D122235ABAD00E55CD1 /* CareConnectFamilyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		194F0CF22235ABAB00E55CD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194F0D022235ABAD00E55CD1 /* LaunchScreen.storyboard in Resources */,
+				194F0CFF2235ABAD00E55CD1 /* Assets.xcassets in Resources */,
+				194F0CFD2235ABAB00E55CD1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194F0D062235ABAD00E55CD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194F0D112235ABAD00E55CD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09717A551898FBFFA9E16B15 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CareConnectFamily/Pods-CareConnectFamily-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CareConnectFamily/Pods-CareConnectFamily-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		1D2CD060052F791CADA80AC4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareConnectFamily-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		35741FA7F3EB61542D2E1DB2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareConnectFamilyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C1B7A23AA28AF58A9E5F7D4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CareConnectFamilyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		194F0CF02235ABAB00E55CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194F0CF82235ABAB00E55CD1 /* AppDelegate.swift in Sources */,
+				194F0D282235B54900E55CD1 /* ActivityViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194F0D042235ABAD00E55CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194F0D0D2235ABAD00E55CD1 /* CareConnectFamilyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		194F0D0F2235ABAD00E55CD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				194F0D182235ABAD00E55CD1 /* CareConnectFamilyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		194F0D0A2235ABAD00E55CD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 194F0CF32235ABAB00E55CD1 /* CareConnectFamily */;
+			targetProxy = 194F0D092235ABAD00E55CD1 /* PBXContainerItemProxy */;
+		};
+		194F0D152235ABAD00E55CD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 194F0CF32235ABAB00E55CD1 /* CareConnectFamily */;
+			targetProxy = 194F0D142235ABAD00E55CD1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		194F0CFB2235ABAB00E55CD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				194F0CFC2235ABAB00E55CD1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		194F0D002235ABAD00E55CD1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				194F0D012235ABAD00E55CD1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		194F0D1A2235ABAD00E55CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		194F0D1B2235ABAD00E55CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		194F0D1D2235ABAD00E55CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38394380F0A1F2D5C8D5A8C6 /* Pods-CareConnectFamily.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZC656MNS6;
+				INFOPLIST_FILE = CareConnectFamily/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelChen.CareConnectFamily;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		194F0D1E2235ABAD00E55CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D539530C17910366523968E /* Pods-CareConnectFamily.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZC656MNS6;
+				INFOPLIST_FILE = CareConnectFamily/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelChen.CareConnectFamily;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		194F0D202235ABAD00E55CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 926A0D3AB548F63BF0B9A56F /* Pods-CareConnectFamilyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZC656MNS6;
+				INFOPLIST_FILE = CareConnectFamilyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelChen.CareConnectFamilyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareConnectFamily.app/CareConnectFamily";
+			};
+			name = Debug;
+		};
+		194F0D212235ABAD00E55CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0CDD1B3DE829B48DE9175F7 /* Pods-CareConnectFamilyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZC656MNS6;
+				INFOPLIST_FILE = CareConnectFamilyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelChen.CareConnectFamilyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CareConnectFamily.app/CareConnectFamily";
+			};
+			name = Release;
+		};
+		194F0D232235ABAD00E55CD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9C8E866DCD651253452F7DF /* Pods-CareConnectFamilyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZC656MNS6;
+				INFOPLIST_FILE = CareConnectFamilyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelChen.CareConnectFamilyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CareConnectFamily;
+			};
+			name = Debug;
+		};
+		194F0D242235ABAD00E55CD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 009DFBBC86F77803C1812AB6 /* Pods-CareConnectFamilyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DZC656MNS6;
+				INFOPLIST_FILE = CareConnectFamilyUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.MichaelChen.CareConnectFamilyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = CareConnectFamily;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		194F0CEF2235ABAB00E55CD1 /* Build configuration list for PBXProject "CareConnectFamily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194F0D1A2235ABAD00E55CD1 /* Debug */,
+				194F0D1B2235ABAD00E55CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194F0D1C2235ABAD00E55CD1 /* Build configuration list for PBXNativeTarget "CareConnectFamily" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194F0D1D2235ABAD00E55CD1 /* Debug */,
+				194F0D1E2235ABAD00E55CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194F0D1F2235ABAD00E55CD1 /* Build configuration list for PBXNativeTarget "CareConnectFamilyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194F0D202235ABAD00E55CD1 /* Debug */,
+				194F0D212235ABAD00E55CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		194F0D222235ABAD00E55CD1 /* Build configuration list for PBXNativeTarget "CareConnectFamilyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				194F0D232235ABAD00E55CD1 /* Debug */,
+				194F0D242235ABAD00E55CD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 194F0CEC2235ABAB00E55CD1 /* Project object */;
+}

@@ -1,0 +1,6 @@
+framework module Pods_CareConnectFamilyUITests {
+  umbrella header "Pods-CareConnectFamilyUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
