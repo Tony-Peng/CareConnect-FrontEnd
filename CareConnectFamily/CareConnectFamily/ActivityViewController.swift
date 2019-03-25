@@ -27,7 +27,8 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     let map = [
         1: "Took a shower",
-        2: "Went to the park"
+        2: "Went to the park",
+        3: "Played chess"
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
