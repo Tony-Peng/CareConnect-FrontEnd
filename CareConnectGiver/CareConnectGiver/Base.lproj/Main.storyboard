@@ -106,7 +106,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Complete Survey"/>
                                 <connections>
-                                    <segue destination="45S-ie-S7g" kind="show" id="fEs-AO-WHT"/>
+                                    <action selector="goToSurvey:" destination="zfM-SP-YrT" eventType="touchUpInside" id="xDg-Sr-Fox"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="REo-rX-DWq">
@@ -127,6 +127,8 @@
                         <outlet property="elderlyName" destination="Vv8-Ka-gOZ" id="aWA-Oq-8qq"/>
                         <outlet property="parkButton" destination="REo-rX-DWq" id="wa5-lG-aUz"/>
                         <outlet property="showerButton" destination="Sgt-To-U7P" id="Lhd-K0-002"/>
+                        <segue destination="XG8-GV-OE8" kind="show" id="ebX-08-F3v"/>
+                        <segue destination="45S-ie-S7g" kind="show" id="bXW-92-VJE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhh-UW-yvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -191,7 +193,7 @@
         <!--Survey View Controller-->
         <scene sceneID="D5h-4e-hMy">
             <objects>
-                <viewController id="45S-ie-S7g" customClass="SurveyViewController" customModule="CareConnectGiver" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SurveyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="45S-ie-S7g" customClass="SurveyViewController" customModule="CareConnectGiver" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pGi-d3-nqB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -371,7 +373,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YWE-lx-xLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1746" y="-222"/>
+            <point key="canvasLocation" x="1897" y="-440"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mGA-Zc-fOw">

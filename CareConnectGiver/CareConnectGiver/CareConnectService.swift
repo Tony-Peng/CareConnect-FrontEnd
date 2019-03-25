@@ -28,6 +28,14 @@ public class CareConnectService {
     
     static func postSurvey(completion: @escaping (Any?, Error?) -> ()) {
         let url = baseURL + "survey/"
+        let parameters: Parameters = [
+            "foo": [1,2,3],
+            "bar": [
+                "baz": "qux"
+            ]
+        ]
+        Alamofire.request(url, method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        
         Alamofire.request(url).responseJSON { response in
             switch response.result {
             case .success(let result):
