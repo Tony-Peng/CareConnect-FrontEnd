@@ -45,6 +45,14 @@ class PeopleDetailViewController: UIViewController {
     }
     
     
+    @IBAction func goToSurvey(_ sender: Any) {
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destVC = Storyboard.instantiateViewController(withIdentifier: "SurveyViewController") as! SurveyViewController
+        
+        destVC.elderlyId = self.getId
+        self.navigationController?.pushViewController(destVC, animated: true)
+    }
+    
     @IBAction func breakfastAction(_ sender: Any) {
         createNewActivity(activityType: "breakfast")
     }
