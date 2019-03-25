@@ -25,4 +25,18 @@ public class CareConnectService {
             }
         }
     }
+    
+    static func postSurvey(completion: @escaping (Any?, Error?) -> ()) {
+        let url = baseURL + "survey/"
+        Alamofire.request(url).responseJSON { response in
+            switch response.result {
+            case .success(let result):
+                let json = JSON(result)
+                print(json)
+                completion(json, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
+    }
 }
