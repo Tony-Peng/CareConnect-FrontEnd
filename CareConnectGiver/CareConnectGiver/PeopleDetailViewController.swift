@@ -36,12 +36,12 @@ class PeopleDetailViewController: UIViewController {
     }
     
     func createNewActivity(activityType: String) {
-        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let destinationVC = Storyboard.instantiateViewController(withIdentifier: "ActivityViewController") as! ActivityViewController
-        destinationVC.getElderlyId = getId
-        //TODO: THis is hardcoded to shower
-        destinationVC.getActivityType = map[activityType]!
-        self.navigationController?.pushViewController(destinationVC, animated: true)
+        let alert = UIAlertController(title: "Alert", message: "Are you sure you want add activity?", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: {action in
+            print("Confirm clicked")
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
     
     
@@ -55,10 +55,6 @@ class PeopleDetailViewController: UIViewController {
     
     @IBAction func breakfastAction(_ sender: Any) {
         createNewActivity(activityType: "breakfast")
-    }
-    
-    @IBAction func parkAction(_ sender: Any) {
-        createNewActivity(activityType: "park")
     }
     
     @IBAction func done(segue:UIStoryboardSegue) {

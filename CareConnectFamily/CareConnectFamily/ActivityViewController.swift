@@ -1,45 +1,36 @@
 //
-//  ActivityViewController.swift
-//  CareConnectFamily
+//  ViewController.swift
+//  tables
 //
-//  Created by Michael Chen on 3/10/19.
-//  Copyright © 2019 Michael Chen. All rights reserved.
+//  Created by Lauren Kearley on 3/24/19.
+//  Copyright © 2019 vip.btap. All rights reserved.
 //
 
+import UIKit
 import Alamofire
 import SwiftyJSON
-import UIKit
 
 struct Activity {
-    let desc: String
-    let date: Date
+    let date: String
+    let desc: [String]
 }
 
-class ActivityViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
-    @IBOutlet weak var todayTable: UITableView!
-    @IBOutlet weak var yesterdayTable: UITableView!
-    var todayData = [Activity]()
-    let dateFormatter = DateFormatter()
+class ActivityViewController: UITableViewController {
     
-    @IBAction func refreshButtonPressed(_ sender: Any) {
-        makeActivityRequest()
-    }
+    var todayData : [String : [String]] = [:]
+    let dateFormatter = DateFormatter()
+    let dateFormatter2 = DateFormatter()
+    var activity : [Activity] = []
+    
     let map = [
         1: "Took a shower",
         2: "Went to the park",
         3: "Played chess"
     ]
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        todayTable.dataSource = self
-        todayTable.delegate = self
-        todayTable.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        makeActivityRequest()
-        
-    }
+    
     func makeActivityRequest() {
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
+        dateFormatter2.dateFormat = "yyyy-MM-dd"
         Alamofire.request("https://mas-care-connect.herokuapp.com/activities/?elderly=1", method: .get).responseJSON { response in
             switch response.result {
             case .success(let result):
@@ -49,49 +40,75 @@ class ActivityViewController: UIViewController, UITableViewDataSource, UITableVi
                     let activityId = v["activityType"].int!
                     let msg = self.map[activityId]! + " for " + v["duration"].string!
                     print(String(v["date"].string!.dropLast()))
-                    let date = self.dateFormatter.date(from: String(v["date"].string!.dropLast()))
-                    let newActivity = Activity(desc: msg, date: date!)
-                    self.todayData.append(newActivity)
+                    var date = self.dateFormatter.date(from: String(v["date"].string!.dropLast()))
+                    let dateString = self.dateFormatter2.string(from: date!)
+                    var arr = self.todayData[dateString] ?? []
+                    arr.append(msg)
+                    self.todayData[dateString] = arr
                 }
-                self.todayData.sort(by: { $0.date.compare($1.date) == .orderedDescending})
+//                self.todayData = self.todayData.sorted{ $0.0 < $1.0 }
                 print(self.todayData)
-                self.todayTable.reloadData()
+                for (key, value) in self.todayData {
+                    self.activity.append(Activity(date: key, desc: value))
+                }
+                self.activity.sorted(by: { self.dateFormatter2.date(from: $0.date)!.timeIntervalSince1970 < self.dateFormatter2.date(from: $1.date)!.timeIntervalSince1970 })
+                self.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
         }
     }
     
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.tableView.tableFooterView = UIView()
+        makeActivityRequest()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell1 = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+            as! CustomTableViewCell
+        cell1.data = activity[indexPath.row]
+        return cell1
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return activity.count
+    }
+    
+}
+class CustomTableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate {
+    var data = Activity(date: "loading", desc: [])
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var title: UILabel!
+    let dateFormatter = DateFormatter()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.isScrollEnabled = true
+        tableView.tableFooterView = UIView()
+        // Register cell
+        tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //Return numbber of items
-        
-        var count:Int?
-        
-        if tableView == self.todayTable {
-            count = todayData.count
-        }
-        return count!
+        return data.desc.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var cell:UITableViewCell?
-        
-        if tableView == self.todayTable {
-            cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath as IndexPath)
-            let previewDetail = todayData[indexPath.row].desc
-            cell!.textLabel!.text = previewDetail
-            
-        }
-        return cell!
+        let cell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "cells")
+        title.text = data.date
+        cell.textLabel?.text = data.desc[indexPath.row]
+        return cell
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10))
     }
-    */
-
 }
+

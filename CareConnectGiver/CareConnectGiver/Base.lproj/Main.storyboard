@@ -83,7 +83,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button" image="breakfast"/>
                                 <connections>
-                                    <action selector="breakfastAction:" destination="zfM-SP-YrT" eventType="touchUpInside" id="DiQ-ka-Fvw"/>
+                                    <action selector="breakfastAction:" destination="zfM-SP-YrT" eventType="touchUpInside" id="UEQ-Cv-cxl"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ceq-7s-ete">
@@ -120,7 +120,6 @@
                                 <connections>
                                     <action selector="goToSurvey:" destination="zfM-SP-YrT" eventType="touchUpInside" id="xDg-Sr-Fox"/>
                                 </connections>
-                                <state key="normal" title="Button" image="artmusic"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVP-40-v2E">
                                 <rect key="frame" x="220" y="213" width="50" height="50"/>
@@ -133,8 +132,6 @@
                     </view>
                     <connections>
                         <outlet property="elderlyName" destination="Vv8-Ka-gOZ" id="aWA-Oq-8qq"/>
-                        <outlet property="parkButton" destination="REo-rX-DWq" id="wa5-lG-aUz"/>
-                        <outlet property="showerButton" destination="Sgt-To-U7P" id="Lhd-K0-002"/>
                         <segue destination="XG8-GV-OE8" kind="show" id="ebX-08-F3v"/>
                         <segue destination="45S-ie-S7g" kind="show" id="bXW-92-VJE"/>
                     </connections>
@@ -401,7 +398,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="artmusic" width="185" height="157"/>
         <image name="breakfast" width="180" height="160"/>
         <image name="dinner" width="177" height="151"/>
         <image name="exercise" width="171" height="165"/>
