@@ -55,7 +55,9 @@ class SurveyViewController: UIViewController {
             case .failure(let error):
                 print(error)
             }
+            
         }
+        _ = navigationController?.popViewController(animated: true)
     }
 
 }
