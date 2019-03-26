@@ -22,37 +22,47 @@ class ActivityViewController: UITableViewController {
     let dateFormatter2 = DateFormatter()
     var activity : [Activity] = []
     
-    let map = [
-        1: "Took a shower",
-        2: "Went to the park",
-        3: "Played chess"
-    ]
+    var map : [Int: String] = [:]
     
     func makeActivityRequest() {
-        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS"
-        dateFormatter2.dateFormat = "yyyy-MM-dd"
-        Alamofire.request("https://mas-care-connect.herokuapp.com/activities/?elderly=1", method: .get).responseJSON { response in
+        Alamofire.request("https://mas-care-connect.herokuapp.com/activitytypes", method: .get).responseJSON { response in
             switch response.result {
             case .success(let result):
-                self.todayData.removeAll()
+                self.map.removeAll()
                 let json = JSON(result)
                 for (_,v) in json {
-                    let activityId = v["activityType"].int!
-                    let msg = self.map[activityId]! + " for " + v["duration"].string!
-                    print(String(v["date"].string!.dropLast()))
-                    var date = self.dateFormatter.date(from: String(v["date"].string!.dropLast()))
-                    let dateString = self.dateFormatter2.string(from: date!)
-                    var arr = self.todayData[dateString] ?? []
-                    arr.append(msg)
-                    self.todayData[dateString] = arr
+                    let id = v["id"].int!
+                    let desc = v["description"].string!
+                    self.map[id] = desc
                 }
-//                self.todayData = self.todayData.sorted{ $0.0 < $1.0 }
-                print(self.todayData)
-                for (key, value) in self.todayData {
-                    self.activity.append(Activity(date: key, desc: value))
+                self.dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+                self.dateFormatter2.dateFormat = "yyyy-MM-dd"
+                Alamofire.request("https://mas-care-connect.herokuapp.com/activities/?elderly=1", method: .get).responseJSON { response in
+                    switch response.result {
+                    case .success(let result):
+                        self.todayData.removeAll()
+                        let json = JSON(result)
+                        for (_,v) in json {
+                            let activityId = v["activityType"].int!
+                            print(v)
+                            let msg = self.map[activityId]!
+                            let date = self.dateFormatter.date(from: String(v["date"].string!.prefix(19)))
+                            let dateString = self.dateFormatter2.string(from: date!)
+                            var arr = self.todayData[dateString] ?? []
+                            arr.append(msg)
+                            self.todayData[dateString] = arr
+                        }
+                        //                self.todayData = self.todayData.sorted{ $0.0 < $1.0 }
+                        print(self.todayData)
+                        for (key, value) in self.todayData {
+                            self.activity.append(Activity(date: key, desc: value))
+                        }
+                        self.activity.sorted(by: { self.dateFormatter2.date(from: $0.date)!.timeIntervalSince1970 < self.dateFormatter2.date(from: $1.date)!.timeIntervalSince1970 })
+                        self.tableView.reloadData()
+                    case .failure(let error):
+                        print(error)
+                    }
                 }
-                self.activity.sorted(by: { self.dateFormatter2.date(from: $0.date)!.timeIntervalSince1970 < self.dateFormatter2.date(from: $1.date)!.timeIntervalSince1970 })
-                self.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
@@ -63,6 +73,7 @@ class ActivityViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
+        self.title = "Welcome Michael!"
         makeActivityRequest()
         // Do any additional setup after loading the view, typically from a nib.
     }

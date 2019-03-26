@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+import SwiftyJSON
 
 class PeopleDetailViewController: UIViewController {
     var getname = String()
@@ -23,8 +25,7 @@ class PeopleDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        elderlyName.textAlignment = NSTextAlignment.center
-        elderlyName.text! = getname
+        self.title = getname
         // Do any additional setup after loading the view.
     }
     
@@ -36,9 +37,38 @@ class PeopleDetailViewController: UIViewController {
     }
     
     func createNewActivity(activityType: String) {
-        let alert = UIAlertController(title: "Alert", message: "Are you sure you want add activity?", preferredStyle: .alert)
+        let msg = String(format: "%@%@%@", "Are you sure you want to add a new ", activityType, " activity?")
+        let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: {action in
-            print("Confirm clicked")
+            let getURL = "https://mas-care-connect.herokuapp.com/activitytypes/?name=" + activityType
+            print(getURL)
+            var activityTypeId = Int()
+            Alamofire.request(getURL, method: .get).responseJSON { response in
+                switch response.result {
+                case .success(let result):
+                    let json = JSON(result)
+                    activityTypeId = json[0]["id"].int!
+                    let parameters = [
+                        "duration": 60,
+                        "activityType": activityTypeId,
+                        "elderly": self.getId,
+                        "caretaker": 1
+                        ] as [String: Any]
+                    
+                    let url = "https://mas-care-connect.herokuapp.com/activities/"
+                    Alamofire.request(url, method:.post, parameters:parameters,encoding: JSONEncoding.default).responseJSON { response in
+                        switch response.result {
+                        case .success:
+                            print(response)
+                        case .failure(let error):
+                            print(error)
+                        }
+                    }
+                    
+                case .failure(let error):
+                    print(error)
+                }
+            }
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -55,6 +85,37 @@ class PeopleDetailViewController: UIViewController {
     
     @IBAction func breakfastAction(_ sender: Any) {
         createNewActivity(activityType: "breakfast")
+    }
+    @IBAction func lunchAction(_ sender: Any) {
+        createNewActivity(activityType: "lunch")
+    }
+    
+    @IBAction func dinnerAction(_ sender: Any) {
+        createNewActivity(activityType: "dinner")
+    }
+    @IBAction func medicineAction(_ sender: Any) {
+        createNewActivity(activityType: "medicine")
+    }
+    
+    @IBAction func showerAction(_ sender: Any) {
+        createNewActivity(activityType: "shower")
+    }
+    
+    @IBAction func napAction(_ sender: Any) {
+        createNewActivity(activityType: "nap")
+    }
+    @IBAction func outingAction(_ sender: Any) {
+        createNewActivity(activityType: "outing")
+    }
+    @IBAction func artmusicAction(_ sender: Any) {
+        createNewActivity(activityType: "artmusic")
+    }
+    
+    @IBAction func exerciseAction(_ sender: Any) {
+        createNewActivity(activityType: "exercise")
+    }
+    @IBAction func gameAction(_ sender: Any) {
+        createNewActivity(activityType: "game")
     }
     
     @IBAction func done(segue:UIStoryboardSegue) {

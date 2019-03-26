@@ -12,7 +12,6 @@
         <!--Navigation Controller-->
         <scene sceneID="got-kr-nZC">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hx6-kK-70O" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="whT-XU-tsR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5rr-Un-tT6">
@@ -24,6 +23,7 @@
                         <segue destination="ibp-1h-Rhh" kind="relationship" relationship="rootViewController" id="JLj-BQ-Gyj"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hx6-kK-70O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-220" y="19.95073891625616"/>
         </scene>
@@ -36,7 +36,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="144" id="D5K-mV-7B1" customClass="CustomTableViewCell" customModule="tables" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="144" id="D5K-mV-7B1" customClass="CustomTableViewCell" customModule="CareConnectFamily" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="144"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="D5K-mV-7B1" id="azw-DM-Bfy">
@@ -58,7 +58,7 @@
                                                 </tableView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="100" constant="143.66999999999999" id="rnz-Nl-WdT"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" priority="100" constant="187" id="rnz-Nl-WdT"/>
                                             </constraints>
                                         </stackView>
                                     </subviews>
