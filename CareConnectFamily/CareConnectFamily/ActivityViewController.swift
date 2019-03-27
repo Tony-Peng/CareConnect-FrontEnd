@@ -17,11 +17,14 @@ struct Activity {
 
 class ActivityViewController: UITableViewController {
     
-    var todayData : [String : [String]] = [:]
+    var todayData : [Date : [String]] = [:]
     let dateFormatter = DateFormatter()
     let dateFormatter2 = DateFormatter()
     var activity : [Activity] = []
     
+    @IBAction func refreshAction(_ sender: Any) {
+        makeActivityRequest()
+    }
     var map : [Int: String] = [:]
     
     func makeActivityRequest() {
@@ -44,20 +47,19 @@ class ActivityViewController: UITableViewController {
                         let json = JSON(result)
                         for (_,v) in json {
                             let activityId = v["activityType"].int!
-                            print(v)
                             let msg = self.map[activityId]!
                             let date = self.dateFormatter.date(from: String(v["date"].string!.prefix(19)))
                             let dateString = self.dateFormatter2.string(from: date!)
-                            var arr = self.todayData[dateString] ?? []
+                            let newDate = self.dateFormatter2.date(from: dateString)
+                            var arr = self.todayData[newDate!] ?? []
                             arr.append(msg)
-                            self.todayData[dateString] = arr
+                            self.todayData[newDate!] = arr
                         }
-                        //                self.todayData = self.todayData.sorted{ $0.0 < $1.0 }
-                        print(self.todayData)
-                        for (key, value) in self.todayData {
-                            self.activity.append(Activity(date: key, desc: value))
+                        var allDates = Array(self.todayData.keys)
+                        allDates.sort(by: {$0.compare($1) == .orderedDescending })
+                        for key in allDates {
+                            self.activity.append(Activity(date: self.dateFormatter2.string(from: key), desc: self.todayData[key]!))
                         }
-                        self.activity.sorted(by: { self.dateFormatter2.date(from: $0.date)!.timeIntervalSince1970 < self.dateFormatter2.date(from: $1.date)!.timeIntervalSince1970 })
                         self.tableView.reloadData()
                     case .failure(let error):
                         print(error)
@@ -97,6 +99,7 @@ class CustomTableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDe
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        title.font = UIFont.boldSystemFont(ofSize: 20)
         dateFormatter.dateFormat = "yyyy-MM-dd"
         tableView.delegate = self
         tableView.dataSource = self
@@ -104,6 +107,7 @@ class CustomTableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDe
         tableView.tableFooterView = UIView()
         // Register cell
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
+        self.tableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

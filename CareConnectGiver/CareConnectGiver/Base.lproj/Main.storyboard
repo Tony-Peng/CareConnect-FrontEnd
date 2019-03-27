@@ -163,6 +163,7 @@
                         <viewLayoutGuide key="safeArea" id="GkX-F3-Y2w"/>
                     </view>
                     <connections>
+                        <outlet property="titleLabel" destination="kHR-tU-XXv" id="1cg-2T-1HR"/>
                         <segue destination="45S-ie-S7g" kind="show" id="bXW-92-VJE"/>
                     </connections>
                 </viewController>
@@ -428,15 +429,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="artmusic" width="185" height="157"/>
-        <image name="breakfast" width="180" height="160"/>
-        <image name="dinner" width="177" height="151"/>
-        <image name="exercise" width="171" height="165"/>
-        <image name="games" width="173" height="221"/>
-        <image name="lunch" width="167" height="164"/>
-        <image name="medication" width="158" height="175"/>
-        <image name="nap" width="189" height="170"/>
-        <image name="outing" width="177" height="180"/>
-        <image name="shower" width="162" height="150"/>
+        <image name="artmusic" width="105" height="103"/>
+        <image name="breakfast" width="97" height="103"/>
+        <image name="dinner" width="97" height="87"/>
+        <image name="exercise" width="83" height="105"/>
+        <image name="games" width="133" height="153"/>
+        <image name="lunch" width="94" height="73"/>
+        <image name="medication" width="93" height="101"/>
+        <image name="nap" width="151" height="124"/>
+        <image name="outing" width="130" height="84"/>
+        <image name="shower" width="123" height="124"/>
     </resources>
 </document>

@@ -14,18 +14,14 @@ class PeopleDetailViewController: UIViewController {
     var getname = String()
     var getId = Int()
     
-    let map = [
-        "shower": 1,
-        "park": 2,
-        "chess": 3,
-        "breakfast": 4
-    ]
     
+    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var elderlyName: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = getname
+        self.titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
         // Do any additional setup after loading the view.
     }
     

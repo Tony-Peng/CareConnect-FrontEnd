@@ -46,14 +46,17 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="iXd-bd-3y4">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="143.66666666666666"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYI-dT-flh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="20.333333333333332"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYI-dT-flh" colorLabel="IBBuiltInLabel-Gray">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="8e8-ue-TTj"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="71v-8N-wfC">
-                                                    <rect key="frame" x="0.0" y="40.333333333333336" width="375" height="103.33333333333331"/>
+                                                    <rect key="frame" x="0.0" y="45.000000000000007" width="375" height="98.666666666666686"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </tableView>
                                             </subviews>
@@ -81,7 +84,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Vw8-aM-nbd">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="Ly5-Kx-9SP"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="Ly5-Kx-9SP">
+                            <connections>
+                                <action selector="refreshAction:" destination="ibp-1h-Rhh" id="J4N-VW-jIG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBk-rq-HmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
