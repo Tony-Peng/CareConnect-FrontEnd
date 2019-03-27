@@ -21,13 +21,15 @@ class ActivityViewController: UITableViewController {
     let dateFormatter = DateFormatter()
     let dateFormatter2 = DateFormatter()
     var activity : [Activity] = []
+    var cells:[CustomTableViewCell] = []
     
     @IBAction func refreshAction(_ sender: Any) {
-        makeActivityRequest()
+        reloadData()
     }
     var map : [Int: String] = [:]
     
-    func makeActivityRequest() {
+    
+    @objc func reloadData() {
         Alamofire.request("https://mas-care-connect.herokuapp.com/activitytypes", method: .get).responseJSON { response in
             switch response.result {
             case .success(let result):
@@ -45,6 +47,7 @@ class ActivityViewController: UITableViewController {
                     case .success(let result):
                         self.todayData.removeAll()
                         let json = JSON(result)
+                        print(json.count)
                         for (_,v) in json {
                             let activityId = v["activityType"].int!
                             let msg = self.map[activityId]!
@@ -57,10 +60,18 @@ class ActivityViewController: UITableViewController {
                         }
                         var allDates = Array(self.todayData.keys)
                         allDates.sort(by: {$0.compare($1) == .orderedDescending })
+                        self.activity.removeAll()
                         for key in allDates {
-                            self.activity.append(Activity(date: self.dateFormatter2.string(from: key), desc: self.todayData[key]!))
+                            self.activity.append(Activity(date: key.asString(style: .full), desc: self.todayData[key]!))
+                        }
+                        print(self.todayData)
+                        print(self.activity)
+                        for i in 0..<self.cells.count {
+                            self.cells[i].data = self.activity[i]
+                            self.cells[i].tableView.reloadData()
                         }
                         self.tableView.reloadData()
+                        self.refreshControl?.endRefreshing()
                     case .failure(let error):
                         print(error)
                     }
@@ -76,7 +87,10 @@ class ActivityViewController: UITableViewController {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
         self.title = "Welcome Michael!"
-        makeActivityRequest()
+        reloadData()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action:  #selector(reloadData), for: .valueChanged)
+        self.refreshControl = refreshControl
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -84,13 +98,26 @@ class ActivityViewController: UITableViewController {
         let cell1 = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             as! CustomTableViewCell
         cell1.data = activity[indexPath.row]
+        cell1.tableView.reloadData()
+        if(!cells.contains(cell1)) {
+            self.cells.append(cell1)
+        }
         return cell1
     }
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return activity.count
     }
     
 }
+extension Date {
+    func asString(style: DateFormatter.Style) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = style
+        return dateFormatter.string(from: self)
+    }
+}
+
 class CustomTableViewCell: UITableViewCell, UITableViewDataSource, UITableViewDelegate {
     var data = Activity(date: "loading", desc: [])
     @IBOutlet weak var tableView: UITableView!
