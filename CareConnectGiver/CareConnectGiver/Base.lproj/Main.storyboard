@@ -410,55 +410,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Was the patient attentive today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHm-AX-6R5">
-                                <rect key="frame" x="23" y="168" width="274" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1. Was the patient attentive today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OHm-AX-6R5">
+                                <rect key="frame" x="15" y="138" width="262.66666666666669" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Did the patient show hope today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN4-mJ-hkO">
-                                <rect key="frame" x="23" y="223" width="274" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2. Did the patient show hope today?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wN4-mJ-hkO">
+                                <rect key="frame" x="15" y="209.33333333333334" width="275" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="t8P-qh-SDx">
-                                <rect key="frame" x="305" y="176" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Brv-TI-uq1">
-                                <rect key="frame" x="305" y="231" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ze6-fA-kfs">
-                                <rect key="frame" x="305" y="286" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ryi-Bv-cuT">
-                                <rect key="frame" x="305" y="348" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SsO-K0-eiX">
-                                <rect key="frame" x="305" y="416" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="po4-Yk-Qu3">
-                                <rect key="frame" x="305" y="484" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="0GD-B5-4Jz" userLabel="Q7">
-                                <rect key="frame" x="218" y="550" width="134" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="0GD-B5-4Jz" userLabel="Q7">
+                                <rect key="frame" x="37" y="635" width="300" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="qPK-pO-An0"/>
+                                </constraints>
                                 <segments>
                                     <segment title="Increase"/>
+                                    <segment title="Same"/>
                                     <segment title="Decrease"/>
                                 </segments>
                             </segmentedControl>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-wt-6Um">
-                                <rect key="frame" x="23" y="651" width="329" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="c8X-wt-6Um">
+                                <rect key="frame" x="37" y="706.33333333333337" width="300" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="g9q-yZ-sed"/>
+                                </constraints>
                                 <segments>
                                     <segment title="😥"/>
                                     <segment title="😕"/>
@@ -468,75 +447,172 @@
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.47934520244598389" blue="0.99908632040023804" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Survey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ay-UY-kqC">
-                                <rect key="frame" x="142" y="108" width="90" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Survey" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6ay-UY-kqC">
+                                <rect key="frame" x="142" y="98" width="90" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Was the patient empathetic toward others?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fc-Ll-z96">
-                                <rect key="frame" x="23" y="278" width="274" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3. Was the patient empathetic toward others?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6fc-Ll-z96">
+                                <rect key="frame" x="15" y="280.66666666666669" width="345" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Were they themselves humorous or laughed at others’ humor?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mya-f5-ofH">
-                                <rect key="frame" x="23" y="340" width="274" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4. Were the patient humorous or laughed at others’ humor?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mya-f5-ofH">
+                                <rect key="frame" x="15" y="372.33333333333331" width="345" height="40.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are they exhibiting any restlessness or anxiety?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdj-hE-TNa">
-                                <rect key="frame" x="23" y="408" width="274" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5. Does the patient seem calm and collected?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdj-hE-TNa">
+                                <rect key="frame" x="15" y="464" width="347.66666666666669" height="20.333333333333314"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Are they having irregular sleep patterns? " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moj-Pd-OeL">
-                                <rect key="frame" x="23" y="476" width="274" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="6. Is the patient sleeping regularly?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Moj-Pd-OeL">
+                                <rect key="frame" x="15" y="535.33333333333337" width="266.33333333333331" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overall Mood?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-BB-8Qb">
-                                <rect key="frame" x="23" y="596" width="177" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8. Overall Mood?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-BB-8Qb">
+                                <rect key="frame" x="15" y="678" width="129" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0n7-An-LkU">
-                                <rect key="frame" x="145" y="722" width="85" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0n7-An-LkU">
+                                <rect key="frame" x="145" y="744.33333333333337" width="85" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="XAN-p3-e81"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
                                     <action selector="submitSurvey:" destination="45S-ie-S7g" eventType="touchUpInside" id="G4N-bo-cbP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Change in Appettite?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28B-HU-7HN">
-                                <rect key="frame" x="23" y="541" width="177" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="hdl-Le-YBA">
+                                <rect key="frame" x="37" y="166.33333333333334" width="120" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="jPn-GU-xIL"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Znw-fs-1xN">
+                                <rect key="frame" x="37" y="237.66666666666666" width="120" height="28.999999999999972"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="QuP-hE-yiM"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="bAh-1W-fC8">
+                                <rect key="frame" x="37" y="329.33333333333331" width="120" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="RIN-Rf-V7Y"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="Mu7-IF-GKZ">
+                                <rect key="frame" x="37" y="421" width="120" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="Srd-uP-uEh"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="9fb-kK-W61">
+                                <rect key="frame" x="37" y="492.33333333333331" width="120" height="28.999999999999943"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="fwa-e4-1yb"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" translatesAutoresizingMaskIntoConstraints="NO" id="5va-XQ-uGW">
+                                <rect key="frame" x="37" y="563.66666666666663" width="120" height="29"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="C1B-Ro-pFE"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Yes"/>
+                                    <segment title="No"/>
+                                </segments>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="7. Change in Appettite?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28B-HU-7HN">
+                                <rect key="frame" x="15" y="606.66666666666663" width="177" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="l3X-BB-8Qb" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="15" id="0iv-f9-sYi"/>
+                            <constraint firstItem="rdj-hE-TNa" firstAttribute="top" secondItem="Mu7-IF-GKZ" secondAttribute="bottom" constant="15" id="2yk-wo-WAR"/>
+                            <constraint firstItem="Znw-fs-1xN" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="37" id="56K-tE-SX2"/>
+                            <constraint firstItem="RxB-7P-YFx" firstAttribute="trailing" secondItem="6ay-UY-kqC" secondAttribute="trailing" constant="143" id="88A-iH-IE1"/>
+                            <constraint firstItem="c8X-wt-6Um" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="37" id="8tr-F2-oz2"/>
+                            <constraint firstItem="OHm-AX-6R5" firstAttribute="top" secondItem="RxB-7P-YFx" secondAttribute="top" constant="50" id="A8q-nf-rTK"/>
+                            <constraint firstItem="wN4-mJ-hkO" firstAttribute="top" secondItem="hdl-Le-YBA" secondAttribute="bottom" constant="15" id="E6W-nv-P5e"/>
+                            <constraint firstItem="Moj-Pd-OeL" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="15" id="EZ1-F3-YjK"/>
+                            <constraint firstItem="6fc-Ll-z96" firstAttribute="top" secondItem="Znw-fs-1xN" secondAttribute="bottom" constant="15" id="Etw-hY-v2y"/>
+                            <constraint firstItem="Mu7-IF-GKZ" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="37" id="Ftl-bs-K8y"/>
+                            <constraint firstItem="RxB-7P-YFx" firstAttribute="trailing" secondItem="6fc-Ll-z96" secondAttribute="trailing" constant="15" id="Goo-yE-Wpc"/>
+                            <constraint firstItem="Mya-f5-ofH" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="15" id="Hce-MX-oYB"/>
+                            <constraint firstItem="28B-HU-7HN" firstAttribute="top" secondItem="5va-XQ-uGW" secondAttribute="bottom" constant="15" id="MEs-gv-nEs"/>
+                            <constraint firstItem="6ay-UY-kqC" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="142" id="OFO-ch-4VP"/>
+                            <constraint firstItem="rdj-hE-TNa" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="15" id="Po7-1D-HDa"/>
+                            <constraint firstItem="0GD-B5-4Jz" firstAttribute="top" secondItem="28B-HU-7HN" secondAttribute="bottom" constant="8" id="SCx-we-jmn"/>
+                            <constraint firstItem="0n7-An-LkU" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="145" id="TGw-KN-W3l"/>
+                            <constraint firstItem="5va-XQ-uGW" firstAttribute="top" secondItem="Moj-Pd-OeL" secondAttribute="bottom" constant="8" id="TiK-Ks-z8C"/>
+                            <constraint firstItem="wN4-mJ-hkO" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="15" id="UO6-L9-aeB"/>
+                            <constraint firstItem="6ay-UY-kqC" firstAttribute="top" secondItem="RxB-7P-YFx" secondAttribute="top" constant="10" id="WmZ-AB-uNi"/>
+                            <constraint firstItem="0n7-An-LkU" firstAttribute="top" secondItem="c8X-wt-6Um" secondAttribute="bottom" constant="10" id="Z3A-XL-CrH"/>
+                            <constraint firstItem="28B-HU-7HN" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="15" id="amM-lz-3em"/>
+                            <constraint firstItem="Znw-fs-1xN" firstAttribute="top" secondItem="wN4-mJ-hkO" secondAttribute="bottom" constant="8" id="aoF-UX-pLg"/>
+                            <constraint firstItem="6fc-Ll-z96" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="15" id="cqQ-Ac-kme"/>
+                            <constraint firstItem="l3X-BB-8Qb" firstAttribute="top" secondItem="0GD-B5-4Jz" secondAttribute="bottom" constant="15" id="cvL-Gm-S0i"/>
+                            <constraint firstItem="bAh-1W-fC8" firstAttribute="top" secondItem="6fc-Ll-z96" secondAttribute="bottom" constant="8" id="e5s-pR-WRd"/>
+                            <constraint firstItem="RxB-7P-YFx" firstAttribute="trailing" secondItem="0n7-An-LkU" secondAttribute="trailing" constant="145" id="gA0-po-rGJ"/>
+                            <constraint firstItem="9fb-kK-W61" firstAttribute="top" secondItem="rdj-hE-TNa" secondAttribute="bottom" constant="8" id="gpv-Ir-kFE"/>
+                            <constraint firstItem="hdl-Le-YBA" firstAttribute="top" secondItem="OHm-AX-6R5" secondAttribute="bottom" constant="8" id="hfa-qP-VQE"/>
+                            <constraint firstItem="Mya-f5-ofH" firstAttribute="top" secondItem="bAh-1W-fC8" secondAttribute="bottom" constant="15" id="hxw-fn-cpl"/>
+                            <constraint firstItem="5va-XQ-uGW" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="37" id="i6O-mT-69B"/>
+                            <constraint firstItem="Mu7-IF-GKZ" firstAttribute="top" secondItem="Mya-f5-ofH" secondAttribute="bottom" constant="8" id="jJW-9R-Jkj"/>
+                            <constraint firstAttribute="trailing" secondItem="Mya-f5-ofH" secondAttribute="trailing" constant="15" id="kfz-aZ-dBw"/>
+                            <constraint firstItem="OHm-AX-6R5" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="15" id="miL-PS-PnT"/>
+                            <constraint firstItem="hdl-Le-YBA" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="37" id="nkc-i1-AR3"/>
+                            <constraint firstItem="Moj-Pd-OeL" firstAttribute="top" secondItem="9fb-kK-W61" secondAttribute="bottom" constant="15" id="qGy-52-zTR"/>
+                            <constraint firstItem="9fb-kK-W61" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="37" id="tRi-va-yxH"/>
+                            <constraint firstItem="bAh-1W-fC8" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="37" id="uhl-yK-qbl"/>
+                            <constraint firstItem="c8X-wt-6Um" firstAttribute="top" secondItem="l3X-BB-8Qb" secondAttribute="bottom" constant="8" id="wNh-7C-VEL"/>
+                            <constraint firstItem="0GD-B5-4Jz" firstAttribute="leading" secondItem="RxB-7P-YFx" secondAttribute="leading" constant="37" id="x3j-BU-yhg"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RxB-7P-YFx"/>
                     </view>
                     <connections>
-                        <outlet property="q1" destination="t8P-qh-SDx" id="X2o-yK-gG5"/>
-                        <outlet property="q2" destination="Brv-TI-uq1" id="5xa-bl-p7g"/>
-                        <outlet property="q3" destination="ze6-fA-kfs" id="qNR-3Y-oTv"/>
-                        <outlet property="q4" destination="Ryi-Bv-cuT" id="DKR-Q0-UlU"/>
-                        <outlet property="q5" destination="SsO-K0-eiX" id="m6B-dt-zi4"/>
-                        <outlet property="q6" destination="po4-Yk-Qu3" id="eNY-f1-YPs"/>
+                        <outlet property="q1" destination="hdl-Le-YBA" id="mdY-Cd-Ld1"/>
+                        <outlet property="q2" destination="Znw-fs-1xN" id="hNh-82-vCY"/>
+                        <outlet property="q3" destination="bAh-1W-fC8" id="jOW-xb-gYi"/>
+                        <outlet property="q4" destination="Mu7-IF-GKZ" id="Mmg-Q6-GMq"/>
+                        <outlet property="q5" destination="9fb-kK-W61" id="8gf-r7-DWc"/>
+                        <outlet property="q6" destination="5va-XQ-uGW" id="hzR-aA-dmb"/>
                         <outlet property="q7" destination="0GD-B5-4Jz" id="bLI-9T-LYQ"/>
                         <outlet property="q8" destination="c8X-wt-6Um" id="bXi-YO-4St"/>
                     </connections>

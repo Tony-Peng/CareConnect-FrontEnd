@@ -15,18 +15,45 @@ class SurveyViewController: UIViewController {
     var caretakerId = 1 // hard coded until we add login functionality
 
     // MARK: Outlets
-    @IBOutlet weak var q1: UISwitch!
-    @IBOutlet weak var q2: UISwitch!
-    @IBOutlet weak var q3: UISwitch!
-    @IBOutlet weak var q4: UISwitch!
-    @IBOutlet weak var q5: UISwitch!
-    @IBOutlet weak var q6: UISwitch!
+    @IBOutlet weak var q1: UISegmentedControl!
+    @IBOutlet weak var q2: UISegmentedControl!
+    @IBOutlet weak var q3: UISegmentedControl!
+    @IBOutlet weak var q4: UISegmentedControl!
+    @IBOutlet weak var q5: UISegmentedControl!
+    @IBOutlet weak var q6: UISegmentedControl!
     @IBOutlet weak var q7: UISegmentedControl!
     @IBOutlet weak var q8: UISegmentedControl!
     
+    func getQ1() -> Bool {
+        return self.q1.selectedSegmentIndex == 0
+    }
+    func getQ2() -> Bool {
+        return self.q2.selectedSegmentIndex == 0
+    }
     
-    func getQ7() -> Bool {
-        return q7.selectedSegmentIndex == 0
+    func getQ3() -> Bool {
+        return self.q3.selectedSegmentIndex == 0
+    }
+    
+    func getQ4() -> Bool {
+        return self.q4.selectedSegmentIndex == 0
+    }
+
+    func getQ5() -> Bool {
+        return self.q5.selectedSegmentIndex == 0
+    }
+
+    func getQ6() -> Bool {
+        return self.q6.selectedSegmentIndex == 0
+    }
+
+    func getQ7() -> Int {
+        if (q7.selectedSegmentIndex == 0) {
+            return 1
+        } else if (q7.selectedSegmentIndex == 1) {
+            return 0
+        }
+        return -1
     }
     
     func getQ8() -> Int {
@@ -34,13 +61,22 @@ class SurveyViewController: UIViewController {
     }
     
     @IBAction func submitSurvey(_ sender: Any) {
+        let msg = "By agreeing, I certify all information is true and correct to the best of my knowledge."
+        let alert = UIAlertController(title: "Confirmation", message: msg, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Agree", style: UIAlertAction.Style.default, handler: self.sendSurveyToAPI))
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
+    func sendSurveyToAPI(action: UIAlertAction) {
         let parameters = [
-            "q1_attentive": q1.isOn,
-            "q2_hope": q2.isOn,
-            "q3_empathetic": q3.isOn,
-            "q4_humor": q4.isOn,
-            "q5_anxiety": q5.isOn,
-            "q6_sleep": q6.isOn,
+            "q1_attentive": self.getQ1(),
+            "q2_hope": self.getQ2(),
+            "q3_empathetic": self.getQ3(),
+            "q4_humor": self.getQ4(),
+            "q5_anxiety": self.getQ5(),
+            "q6_sleep": self.getQ6(),
             "q7_appetite": getQ7(),
             "q8_mood": getQ8(),
             "elderly": elderlyId,
