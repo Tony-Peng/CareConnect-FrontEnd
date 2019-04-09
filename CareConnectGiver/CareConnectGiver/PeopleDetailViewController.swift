@@ -11,37 +11,60 @@ import Alamofire
 import SwiftyJSON
 
 class PeopleDetailViewController: UIViewController {
-    var getname = String()
-    var getId = Int()
-    var picName = String()
     
+    var person: Person?
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var elderlyName: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
-    
-    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.title = getname
+        self.title = self.person?.name
         self.titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        
         self.loadProfilePicture()
-        
-        
-     
     }
     
     func loadProfilePicture() {
-        self.profilePic.image = UIImage(named: self.picName)
+        self.profilePic.image = self.person?.picture
         self.profilePic.layer.borderWidth = 1
         self.profilePic.layer.masksToBounds = false
         self.profilePic.layer.borderColor = UIColor.white.cgColor
         self.profilePic.layer.cornerRadius = self.profilePic.frame.height / 2
         self.profilePic.clipsToBounds = true
+    }
+    
+    func postActivityToAPI(activityType: String) {
+        let getURL = "https://mas-care-connect.herokuapp.com/activitytypes/?name=" + activityType
+        print(getURL)
+        var activityTypeId = Int()
+        Alamofire.request(getURL, method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let result):
+                let json = JSON(result)
+                activityTypeId = json[0]["id"].int!
+                let parameters = [
+                    "duration": 60,
+                    "activityType": activityTypeId,
+                    "elderly": self.person?.id,
+                    "caretaker": 1
+                    ] as [String: Any]
+                
+                let url = "https://mas-care-connect.herokuapp.com/activities/"
+                Alamofire.request(url, method:.post, parameters:parameters,encoding: JSONEncoding.default).responseJSON { response in
+                    switch response.result {
+                    case .success:
+                        print(response)
+                    case .failure(let error):
+                        print(error)
+                    }
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -55,35 +78,7 @@ class PeopleDetailViewController: UIViewController {
         let msg = String(format: "%@%@%@", "Are you sure you want to add a new ", activityType, " activity?")
         let alert = UIAlertController(title: "Alert", message: msg, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: {action in
-            let getURL = "https://mas-care-connect.herokuapp.com/activitytypes/?name=" + activityType
-            print(getURL)
-            var activityTypeId = Int()
-            Alamofire.request(getURL, method: .get).responseJSON { response in
-                switch response.result {
-                case .success(let result):
-                    let json = JSON(result)
-                    activityTypeId = json[0]["id"].int!
-                    let parameters = [
-                        "duration": 60,
-                        "activityType": activityTypeId,
-                        "elderly": self.getId,
-                        "caretaker": 1
-                        ] as [String: Any]
-                    
-                    let url = "https://mas-care-connect.herokuapp.com/activities/"
-                    Alamofire.request(url, method:.post, parameters:parameters,encoding: JSONEncoding.default).responseJSON { response in
-                        switch response.result {
-                        case .success:
-                            print(response)
-                        case .failure(let error):
-                            print(error)
-                        }
-                    }
-                    
-                case .failure(let error):
-                    print(error)
-                }
-            }
+            self.postActivityToAPI(activityType: activityType)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertAction.Style.cancel, handler: nil))
         self.present(alert, animated: true, completion: nil)
@@ -94,7 +89,7 @@ class PeopleDetailViewController: UIViewController {
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)
         let destVC = Storyboard.instantiateViewController(withIdentifier: "SurveyViewController") as! SurveyViewController
         
-        destVC.elderlyId = self.getId
+        destVC.person = self.person
         self.navigationController?.pushViewController(destVC, animated: true)
     }
     

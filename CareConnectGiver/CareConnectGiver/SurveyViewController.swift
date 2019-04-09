@@ -11,7 +11,7 @@ import Alamofire
 
 class SurveyViewController: UIViewController {
     
-    var elderlyId = Int()
+    var person: Person?
     var caretakerId = 1 // hard coded until we add login functionality
 
     // MARK: Outlets
@@ -79,7 +79,7 @@ class SurveyViewController: UIViewController {
             "q6_sleep": self.getQ6(),
             "q7_appetite": getQ7(),
             "q8_mood": getQ8(),
-            "elderly": elderlyId,
+            "elderly": self.person?.id,
             "caretaker": caretakerId
             ] as [String : Any]
         
