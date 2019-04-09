@@ -13,16 +13,35 @@ import SwiftyJSON
 class PeopleDetailViewController: UIViewController {
     var getname = String()
     var getId = Int()
+    var picName = String()
     
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var elderlyName: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         self.title = getname
         self.titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        // Do any additional setup after loading the view.
+        
+        self.loadProfilePicture()
+        
+        
+     
+    }
+    
+    func loadProfilePicture() {
+        self.profilePic.image = UIImage(named: self.picName)
+        self.profilePic.layer.borderWidth = 1
+        self.profilePic.layer.masksToBounds = false
+        self.profilePic.layer.borderColor = UIColor.white.cgColor
+        self.profilePic.layer.cornerRadius = self.profilePic.frame.height / 2
+        self.profilePic.clipsToBounds = true
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

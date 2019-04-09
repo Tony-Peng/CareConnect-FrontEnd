@@ -11,28 +11,40 @@ import UIKit
 import SwiftyJSON
 
 class PeopleTableViewController: UITableViewController {
+    var persons = [Person]()
     var people = [String]()
+    var peoplePics = [String]()
     var peopleIds = [Int]()
+    let cellId = "peopleCell"
+    var done = false
     override func viewDidLoad() {
         super.viewDidLoad()
-//        CareConnectService.getElderlies() { (response, error) in
-//            response?.forEach{print($0)}
-//        }
         Alamofire.request("https://mas-care-connect.herokuapp.com/elderlies/", method: .get).responseJSON { response in
             switch response.result {
             case .success(let result):
                 let json = JSON(result)
                 for (_,v) in json {
-                    print(v)
-                    let s = v["name"].string!
-                    self.people.append(s)
+//                    print(v)
+                    let name = v["name"].string!
+                    let id = v["id"].int!
+                    let pictureString = v["picture"].string!
+                    let picture = UIImage(named: pictureString)!
+                    let birth_date = v["birth_date"].string!
+                    let temp = Person(id: id, name: name, picture: picture, birth_date: birth_date)
+                    self.persons.append(temp)
+                    self.people.append(name)
+                    self.peoplePics.append(v["picture"].string!)
                     self.peopleIds.append(v["id"].int!)
                 }
+                self.done = true
                 self.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
         }
+       self.tableView.delegate = self
+       self.tableView.dataSource = self
+        //self.tableView.register(PersonTableViewCell.self, forCellReuseIdentifier: cellId)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -54,10 +66,17 @@ class PeopleTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath)
-        cell.textLabel?.text = people[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath) as! PersonTableViewCell
+        cell.person = self.persons[indexPath.row]
+//        cell.nameLabel?.text = "Andre"
+//        cell.textLabel?.text = people[indexPath.row]
         // Configure the cell...
-
+        
+        
+        
+//        print("Returning cell")
+//        print(cell)
+//        cell.nameLabel?.text = "Test"
         return cell
     }
     
@@ -66,6 +85,7 @@ class PeopleTableViewController: UITableViewController {
         let DvC = Storyboard.instantiateViewController(withIdentifier: "PeopleDetailViewController") as! PeopleDetailViewController
         
         DvC.getname = people[indexPath.row]
+        DvC.picName = peoplePics[indexPath.row]
         DvC.getId = peopleIds[indexPath.row]
         self.navigationController?.pushViewController(DvC, animated: true)
     }
