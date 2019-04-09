@@ -84,6 +84,13 @@ class PeopleDetailViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
+    @IBAction func goToComment(_ sender: Any) {
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let destVC = Storyboard.instantiateViewController(withIdentifier: "CommentViewController") as! CommentViewController
+        
+        destVC.person = self.person
+        self.navigationController?.pushViewController(destVC, animated: true)
+    }
     
     @IBAction func goToSurvey(_ sender: Any) {
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)

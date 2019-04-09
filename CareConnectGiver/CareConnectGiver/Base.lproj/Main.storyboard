@@ -274,7 +274,7 @@
                                 <rect key="frame" x="40" y="726" width="99" height="30"/>
                                 <state key="normal" title="Add Comment"/>
                                 <connections>
-                                    <segue destination="zj3-up-4GD" kind="presentation" id="mvx-wA-ZIh"/>
+                                    <action selector="goToComment:" destination="zfM-SP-YrT" eventType="touchUpInside" id="DHE-qc-2tH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -341,66 +341,66 @@
                         <outlet property="profilePic" destination="zKV-2C-ZYp" id="JAH-Fg-mMc"/>
                         <outlet property="titleLabel" destination="kHR-tU-XXv" id="1cg-2T-1HR"/>
                         <segue destination="45S-ie-S7g" kind="show" id="bXW-92-VJE"/>
+                        <segue destination="Vqe-25-Dcc" kind="show" id="jG2-Bo-Mvr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhh-UW-yvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="56.799999999999997" y="-448.52216748768473"/>
+            <point key="canvasLocation" x="103" y="-593"/>
         </scene>
-        <!--Note View Controller-->
-        <scene sceneID="Cum-tS-gAS">
+        <!--Comment View Controller-->
+        <scene sceneID="NTZ-L3-gEO">
             <objects>
-                <viewController id="zj3-up-4GD" customClass="NoteViewController" customModule="CareConnectGiver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="3UD-RE-qzz">
+                <viewController storyboardIdentifier="CommentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vqe-25-Dcc" customClass="CommentViewController" customModule="CareConnectGiver" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V9G-XA-edk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ROu-IN-esX">
-                                <rect key="frame" x="3" y="20" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="Add Note" id="RKC-dk-KGO">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="oh6-am-7cX">
-                                            <connections>
-                                                <segue destination="EPq-og-DYG" kind="unwind" identifier="cancelSegueNote" unwindAction="cancelWithSegue:" id="huL-rB-klj"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="Ojt-VG-fhZ">
-                                            <connections>
-                                                <segue destination="EPq-og-DYG" kind="unwind" identifier="doneSegueNote" unwindAction="doneWithSegue:" id="iKC-Hv-3op"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HMb-M3-vcK">
-                                <rect key="frame" x="46" y="550" width="49" height="31"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add Comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7dQ-dO-TLU">
+                                <rect key="frame" x="94" y="110" width="187" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notify family immediately" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NFn-YZ-d4I">
-                                <rect key="frame" x="101" y="553" width="219" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Add Note..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="FDS-rC-QQd">
-                                <rect key="frame" x="26" y="134" width="323" height="377"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" keyboardDismissMode="interactive" text="This message will be added to the daily report" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qXv-5V-7td">
+                                <rect key="frame" x="47" y="170" width="281" height="158"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XJV-Sm-Qla">
+                                <rect key="frame" x="47" y="348" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Notify Family Immediately" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MTM-oE-S6v">
+                                <rect key="frame" x="111" y="353" width="208" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASJ-JR-Mif">
+                                <rect key="frame" x="113" y="393" width="153" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Submit Comment"/>
+                                <connections>
+                                    <action selector="submitComment:" destination="Vqe-25-Dcc" eventType="touchUpInside" id="Trm-WF-uPC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="bWH-e5-eQ8"/>
+                        <viewLayoutGuide key="safeArea" id="GuS-wp-wcC"/>
                     </view>
+                    <connections>
+                        <outlet property="commentText" destination="qXv-5V-7td" id="L7P-xI-08J"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x04-w0-woi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="EPq-og-DYG" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U2e-16-Z04" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="-1103"/>
+            <point key="canvasLocation" x="1509.5999999999999" y="-1165.2709359605913"/>
         </scene>
         <!--Survey View Controller-->
         <scene sceneID="D5h-4e-hMy">
@@ -619,49 +619,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Emx-Ta-Y7B" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="966" y="90"/>
-        </scene>
-        <!--Activity View Controller-->
-        <scene sceneID="crc-Nv-pgc">
-            <objects>
-                <viewController storyboardIdentifier="ActivityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XG8-GV-OE8" customClass="ActivityViewController" customModule="CareConnectGiver" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="9Iv-tl-fRi">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Duration" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eip-oA-XGL">
-                                <rect key="frame" x="154" y="148" width="66" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="countDownTimer" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="khv-KI-nOQ">
-                                <rect key="frame" x="0.0" y="183" width="375" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <date key="date" timeIntervalSinceReferenceDate="573892897.03441799">
-                                    <!--2019-03-10 06:41:37 +0000-->
-                                </date>
-                            </datePicker>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rQE-xr-YEr">
-                                <rect key="frame" x="137" y="435" width="101" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create Activity"/>
-                                <connections>
-                                    <action selector="submitActivity:" destination="XG8-GV-OE8" eventType="touchUpInside" id="46a-en-lat"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="yr2-WH-mja"/>
-                    </view>
-                    <connections>
-                        <outlet property="durationPicker" destination="khv-KI-nOQ" id="nsj-5q-i10"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YWE-lx-xLs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1897" y="-440"/>
+            <point key="canvasLocation" x="1510" y="-392"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="mGA-Zc-fOw">
