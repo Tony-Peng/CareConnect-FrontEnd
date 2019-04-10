@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -84,16 +85,55 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="Vw8-aM-nbd">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="refresh" id="Ly5-Kx-9SP">
+                        <barButtonItem key="rightBarButtonItem" title="Survey" style="plain" id="LGx-p3-adl">
                             <connections>
-                                <action selector="refreshAction:" destination="ibp-1h-Rhh" id="J4N-VW-jIG"/>
+                                <action selector="surveyAction:" destination="ibp-1h-Rhh" id="6y9-b4-nWH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="surveyButton" destination="LGx-p3-adl" id="EtM-qL-sur"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PBk-rq-HmN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1152.8" y="78.325123152709367"/>
+        </scene>
+        <!--Survey Activity View Controller-->
+        <scene sceneID="aH7-es-KbW">
+            <objects>
+                <viewController storyboardIdentifier="SurveyActivityViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="cqd-33-pMS" customClass="SurveyActivityViewController" customModule="CareConnectFamily" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GrI-rC-izL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trends" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXB-Qq-i4k">
+                                <rect key="frame" x="114" y="144" width="152" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="8Bj-pI-WmI">
+                                <rect key="frame" x="6" y="108" width="194" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="7 Days"/>
+                                    <segment title="30 Days"/>
+                                    <segment title="Table"/>
+                                </segments>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="w0i-Yv-jqD"/>
+                    </view>
+                    <connections>
+                        <outlet property="trendLabel" destination="EXB-Qq-i4k" id="XnM-Bc-58u"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wuf-z9-gWS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1952.8" y="77.58620689655173"/>
         </scene>
     </scenes>
 </document>

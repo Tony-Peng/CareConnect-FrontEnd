@@ -15,6 +15,8 @@
 		194F0D0D2235ABAD00E55CD1 /* CareConnectFamilyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F0D0C2235ABAD00E55CD1 /* CareConnectFamilyTests.swift */; };
 		194F0D182235ABAD00E55CD1 /* CareConnectFamilyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F0D172235ABAD00E55CD1 /* CareConnectFamilyUITests.swift */; };
 		194F0D282235B54900E55CD1 /* ActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 194F0D272235B54900E55CD1 /* ActivityViewController.swift */; };
+		19D95AA7225451360017F53C /* SurveyActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D95AA6225451360017F53C /* SurveyActivityViewController.swift */; };
+		19D95AA9225459230017F53C /* ExamplesDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D95AA8225459230017F53C /* ExamplesDefault.swift */; };
 		C216BBD5096DA2F768781364 /* Pods_CareConnectFamilyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03EADA08E9AEF0E668225A29 /* Pods_CareConnectFamilyUITests.framework */; };
 		E1C8B3AF018F3CEE96140980 /* Pods_CareConnectFamilyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0422F410CDD8FB4EACB52ABA /* Pods_CareConnectFamilyTests.framework */; };
 /* End PBXBuildFile section */
@@ -53,6 +55,8 @@
 		194F0D172235ABAD00E55CD1 /* CareConnectFamilyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectFamilyUITests.swift; sourceTree = "<group>"; };
 		194F0D192235ABAD00E55CD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		194F0D272235B54900E55CD1 /* ActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewController.swift; sourceTree = "<group>"; };
+		19D95AA6225451360017F53C /* SurveyActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SurveyActivityViewController.swift; sourceTree = "<group>"; };
+		19D95AA8225459230017F53C /* ExamplesDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesDefault.swift; sourceTree = "<group>"; };
 		38394380F0A1F2D5C8D5A8C6 /* Pods-CareConnectFamily.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamily.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamily/Pods-CareConnectFamily.debug.xcconfig"; sourceTree = "<group>"; };
 		6D539530C17910366523968E /* Pods-CareConnectFamily.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamily.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamily/Pods-CareConnectFamily.release.xcconfig"; sourceTree = "<group>"; };
 		926A0D3AB548F63BF0B9A56F /* Pods-CareConnectFamilyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectFamilyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectFamilyTests/Pods-CareConnectFamilyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -120,6 +124,8 @@
 				194F0CFE2235ABAD00E55CD1 /* Assets.xcassets */,
 				194F0D002235ABAD00E55CD1 /* LaunchScreen.storyboard */,
 				194F0D032235ABAD00E55CD1 /* Info.plist */,
+				19D95AA6225451360017F53C /* SurveyActivityViewController.swift */,
+				19D95AA8225459230017F53C /* ExamplesDefault.swift */,
 			);
 			path = CareConnectFamily;
 			sourceTree = "<group>";
@@ -306,6 +312,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CareConnectFamily/Pods-CareConnectFamily-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -313,6 +320,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -393,7 +401,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19D95AA9225459230017F53C /* ExamplesDefault.swift in Sources */,
 				194F0CF82235ABAB00E55CD1 /* AppDelegate.swift in Sources */,
+				19D95AA7225451360017F53C /* SurveyActivityViewController.swift in Sources */,
 				194F0D282235B54900E55CD1 /* ActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

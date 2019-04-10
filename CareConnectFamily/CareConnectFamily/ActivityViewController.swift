@@ -23,11 +23,14 @@ class ActivityViewController: UITableViewController {
     var activity : [Activity] = []
     var cells:[CustomTableViewCell] = []
     
-    @IBAction func refreshAction(_ sender: Any) {
-        reloadData()
-    }
     var map : [Int: String] = [:]
     
+    @IBOutlet weak var surveyButton: UIBarButtonItem!
+    @IBAction func surveyAction(_ sender: Any) {
+        let Storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let SvC = Storyboard.instantiateViewController(withIdentifier: "SurveyActivityViewController") as! SurveyActivityViewController
+        self.navigationController?.pushViewController(SvC, animated: true)
+    }
     
     @objc func reloadData() {
         Alamofire.request("https://mas-care-connect.herokuapp.com/activitytypes", method: .get).responseJSON { response in
@@ -86,7 +89,7 @@ class ActivityViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.tableFooterView = UIView()
-        self.title = "Welcome Michael!"
+        self.title = "Overview"
         reloadData()
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action:  #selector(reloadData), for: .valueChanged)
