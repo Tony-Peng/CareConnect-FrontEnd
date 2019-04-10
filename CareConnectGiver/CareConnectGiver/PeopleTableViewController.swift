@@ -11,28 +11,30 @@ import UIKit
 import SwiftyJSON
 
 class PeopleTableViewController: UITableViewController {
-    var people = [String]()
-    var peopleIds = [Int]()
+    var persons = [Person]()
+    let cellId = "peopleCell"
     override func viewDidLoad() {
         super.viewDidLoad()
-//        CareConnectService.getElderlies() { (response, error) in
-//            response?.forEach{print($0)}
-//        }
         Alamofire.request("https://mas-care-connect.herokuapp.com/elderlies/", method: .get).responseJSON { response in
             switch response.result {
             case .success(let result):
                 let json = JSON(result)
                 for (_,v) in json {
-                    print(v)
-                    let s = v["name"].string!
-                    self.people.append(s)
-                    self.peopleIds.append(v["id"].int!)
+                    let name = v["name"].string!
+                    let id = v["id"].int!
+                    let pictureString = v["picture"].string!
+                    let picture = UIImage(named: pictureString)!
+                    let birth_date = v["birth_date"].string!
+                    let temp = Person(id: id, name: name, picture: picture, birth_date: birth_date)
+                    self.persons.append(temp)
                 }
                 self.tableView.reloadData()
             case .failure(let error):
                 print(error)
             }
         }
+       self.tableView.delegate = self
+       self.tableView.dataSource = self
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -49,24 +51,20 @@ class PeopleTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return people.count
+        return self.persons.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath)
-        cell.textLabel?.text = people[indexPath.row]
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "peopleCell", for: indexPath) as! PersonTableViewCell
+        cell.person = self.persons[indexPath.row]
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let Storyboard = UIStoryboard(name: "Main", bundle: nil)
         let DvC = Storyboard.instantiateViewController(withIdentifier: "PeopleDetailViewController") as! PeopleDetailViewController
-        
-        DvC.getname = people[indexPath.row]
-        DvC.getId = peopleIds[indexPath.row]
+        DvC.person = self.persons[indexPath.row]
         self.navigationController?.pushViewController(DvC, animated: true)
     }
     @IBAction func cancel(segue:UIStoryboardSegue) {
