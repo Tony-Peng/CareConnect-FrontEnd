@@ -9,6 +9,7 @@ target 'CareConnectFamily' do
   pod 'Alamofire', '~> 4.0'
   pod 'SwiftyJSON'
 pod 'SwiftCharts', '~> 0.6.5'
+pod 'ChartLegends'
 
   target 'CareConnectFamilyTests' do
     inherit! :search_paths

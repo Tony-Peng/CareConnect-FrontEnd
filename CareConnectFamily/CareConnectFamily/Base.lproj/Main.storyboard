@@ -123,11 +123,23 @@
                                     <segment title="Table"/>
                                 </segments>
                             </segmentedControl>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wS7-41-8T2" customClass="ChartLegendsView" customModule="ChartLegends">
+                                <rect key="frame" x="274" y="153" width="89" height="234"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="layoutTypeRawValue" value="columns"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="columns">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="w0i-Yv-jqD"/>
                     </view>
                     <connections>
+                        <outlet property="legendOutlet" destination="wS7-41-8T2" id="E5H-3f-GOm"/>
                         <outlet property="trendLabel" destination="EXB-Qq-i4k" id="XnM-Bc-58u"/>
                     </connections>
                 </viewController>

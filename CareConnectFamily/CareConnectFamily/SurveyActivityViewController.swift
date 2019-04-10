@@ -10,28 +10,64 @@ import UIKit
 import SwiftCharts
 import Alamofire
 import SwiftyJSON
+import ChartLegends
 
-class SurveyActivityViewController: UIViewController {
-    fileprivate var chart: Chart? // arc
-    
-    func UIColorFromRGB(rgbValue: UInt) -> UIColor {
-        return UIColor(
-            red: CGFloat((rgbValue & 0xFF0000) >> 16) / 255.0,
-            green: CGFloat((rgbValue & 0x00FF00) >> 8) / 255.0,
-            blue: CGFloat(rgbValue & 0x0000FF) / 255.0,
+class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
+    fileprivate var chart: Chart?
+    fileprivate var legend: ChartLegendsView?
+
+    let colors = [
+        "Attentiveness": UIColor(
+        red: CGFloat(230.0/255.0),
+        green: CGFloat(25.0/255.0),
+        blue: CGFloat(75.0/255.0),
+        alpha: CGFloat(1.0)
+        ),
+        "Hope" : UIColor(
+            red: CGFloat(60.0/255.0),
+            green: CGFloat(180.0/255.0),
+            blue: CGFloat(75.0/255.0),
+            alpha: CGFloat(1.0)
+        ),
+        "Empathy" : UIColor(
+            red: CGFloat(0.0/255.0),
+            green: CGFloat(130.0/255.0),
+            blue: CGFloat(200.0/255.0),
+            alpha: CGFloat(1.0)
+        ),
+        "Humor" : UIColor(
+            red: CGFloat(245.0/255.0),
+            green: CGFloat(130.0/255.0),
+            blue: CGFloat(48.0/255.0),
+            alpha: CGFloat(1.0)
+        ),
+        "Anxiety" : UIColor(
+            red: CGFloat(145.0/255.0),
+            green: CGFloat(30.0/255.0),
+            blue: CGFloat(180.0/255.0),
+            alpha: CGFloat(1.0)
+        ),
+        "Sleep" : UIColor(
+            red: CGFloat(0.0/255.0),
+            green: CGFloat(0.0/255.0),
+            blue: CGFloat(0.0/255.0),
+            alpha: CGFloat(1.0)
+        ),
+        "Appetite" : UIColor(
+            red: CGFloat(170.0/255.0),
+            green: CGFloat(110.0/255.0),
+            blue: CGFloat(40.0/255.0),
             alpha: CGFloat(1.0)
         )
-    }
+    ]
     
     func chartFrameFunc(xValue: Int, yValue: Int) -> CGRect {
         return CGRect(x: xValue
             , y: yValue, width: 275, height: 275)
     }
     
-    func generateBooleanChart(xValue: Int, yValue: Int, yAxisLabel: String, attentiveData: [(date: String, val: Double)], hopeData: [(date: String, val: Double)]) {
+    func generateBooleanChart(xValue: Int, yValue: Int, yAxisLabel: String, attentiveData: [(date: String, val: Double)], hopeData: [(date: String, val: Double)], empathyData: [(date: String, val: Double)], humorData: [(date: String, val: Double)]) {
         let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
-        
-        let zero = ChartAxisValueDouble(0)
         
         let yGenerator = ChartAxisGeneratorMultiplier(1)
         let labelsGenerator = ChartAxisLabelsGeneratorFunc {scalar in
@@ -52,13 +88,10 @@ class SurveyActivityViewController: UIViewController {
         let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
         let (xAxisLayer, yAxisLayer, innerFrame) = (coordsSpace.xAxisLayer, coordsSpace.yAxisLayer, coordsSpace.chartInnerFrame)
         
-        //Choosing Colors
-        let alpha: CGFloat = 0.6
-        let attentiveColor = UIColorFromRGB(rgbValue: 0x111111).withAlphaComponent(alpha)
-        let hopeColor = UIColorFromRGB(rgbValue: 0x4286f4)
-        let attentiveLineLayer = self.generateLines(data: attentiveData, coordsSpace: coordsSpace, color: attentiveColor)
-        let hopeLineLayer = self.generateLines(data: hopeData, coordsSpace: coordsSpace, color: hopeColor)
-        
+        let attentiveLineLayer = self.generateLines(data: attentiveData, coordsSpace: coordsSpace, color: colors["Attentiveness"]!)
+        let hopeLineLayer = self.generateLines(data: hopeData, coordsSpace: coordsSpace, color: colors["Hope"]!)
+        let empathyLineLayer = self.generateLines(data: empathyData, coordsSpace: coordsSpace, color: colors["Empathy"]!)
+        let humorLineLayer = self.generateLines(data: humorData, coordsSpace: coordsSpace, color: colors["Humor"]!)
         let chart = Chart(
             frame: chartFrame,
             innerFrame: innerFrame,
@@ -67,12 +100,25 @@ class SurveyActivityViewController: UIViewController {
                 xAxisLayer,
                 yAxisLayer,
                 attentiveLineLayer,
-                hopeLineLayer
+                hopeLineLayer,
+                empathyLineLayer,
+                humorLineLayer
             ]
         )
-        
+        let legends = [
+            (text: "Attentive", color: colors["Attentiveness"]!),
+            (text: "Hope", color: colors["Hope"]!),
+            (text: "Empathy", color: colors["Empathy"]!),
+            (text: "Humor", color: colors["Humor"]!),
+            (text: "Anxiety", color: colors["Anxiety"]!),
+            (text: "Sleep", color: colors["Sleep"]!),
+            (text: "Appetite", color: colors["Appetite"]!)
+        ]
+        legendOutlet.setLegends(legends)
+
         self.view.addSubview(chart.view)
         self.chart = chart
+        legendOutlet.delegate = self
     }
     
     func generateLines(data: [(date: String, val: Double)], coordsSpace : ChartCoordsSpaceLeftBottomSingleAxis, color: UIColor) -> ChartPointsLineLayer<ChartPoint> {
@@ -87,8 +133,12 @@ class SurveyActivityViewController: UIViewController {
     
     
     @IBOutlet weak var trendLabel: UILabel!
+    @IBOutlet weak var legendOutlet: ChartLegendsView!
+    
     var attentiveResponse = [(date: String, val: Int)]()
     var hopeResponse = [(date: String, val: Int)]()
+    var empathyResponse = [(date: String, val: Int)]()
+    var humorResponse = [(date: String, val: Int)]()
     let dateFormatter = DateFormatter()
     let dateFormatterString = DateFormatter()
     override func viewDidLoad() {
@@ -107,11 +157,14 @@ class SurveyActivityViewController: UIViewController {
                     let dateString = self.dateFormatterString.string(from: date!)
                     self.attentiveResponse.append((date: dateString, val: v["q1_attentive"].int!))
                     self.hopeResponse.append((date: dateString, val: v["q2_hope"].int!))
-
+                    self.empathyResponse.append((date: dateString, val: v["q3_empathetic"].int!))
+                    self.humorResponse.append((date: dateString, val: v["q4_humor"].int!))
                 }
                 let attentiveData = self.movingAverage(input: self.attentiveResponse.prefix(7))
                 let hopeData = self.movingAverage(input: self.hopeResponse.prefix(7))
-                self.generateBooleanChart(xValue: 35, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Attentiveness", attentiveData: attentiveData, hopeData: hopeData)
+                let empathyData = self.movingAverage(input: self.empathyResponse.prefix(7))
+                let humorData = self.movingAverage(input: self.humorResponse.prefix(7))
+                self.generateBooleanChart(xValue: 15, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Value", attentiveData: attentiveData, hopeData: hopeData, empathyData : empathyData, humorData: humorData)
             case .failure(let error):
                 print(error)
             }
@@ -134,7 +187,10 @@ class SurveyActivityViewController: UIViewController {
             let newAvg = Double(runningAvg) / Double(currTotal)
             ans.append((date: k, val: newAvg))
         }
-        print(ans)
         return ans
+    }
+    
+    func onSelectLegend(legend: ChartLegend, cell: UICollectionViewCell, indexPath: IndexPath) {
+        print("Selected legend: \(legend.text)")
     }
 }
