@@ -63,7 +63,7 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
     
     func chartFrameFunc(xValue: Int, yValue: Int) -> CGRect {
         return CGRect(x: xValue
-            , y: yValue, width: 275, height: 275)
+            , y: yValue, width: 300, height: 275)
     }
     
     func generateBooleanChart(xValue: Int, yValue: Int, yAxisLabel: String, attentiveData: [(date: String, val: Double)], hopeData: [(date: String, val: Double)], empathyData: [(date: String, val: Double)], humorData: [(date: String, val: Double)]) {
@@ -164,7 +164,7 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
                 let hopeData = self.movingAverage(input: self.hopeResponse.prefix(7))
                 let empathyData = self.movingAverage(input: self.empathyResponse.prefix(7))
                 let humorData = self.movingAverage(input: self.humorResponse.prefix(7))
-                self.generateBooleanChart(xValue: 15, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Value", attentiveData: attentiveData, hopeData: hopeData, empathyData : empathyData, humorData: humorData)
+                self.generateBooleanChart(xValue: 0, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Value", attentiveData: attentiveData, hopeData: hopeData, empathyData : empathyData, humorData: humorData)
             case .failure(let error):
                 print(error)
             }
