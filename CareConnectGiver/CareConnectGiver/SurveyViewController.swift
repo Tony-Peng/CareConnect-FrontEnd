@@ -18,7 +18,7 @@ class SurveyViewController: UIViewController {
     @IBOutlet weak var q1: UISegmentedControl!
     @IBOutlet weak var q2: UISegmentedControl!
     @IBOutlet weak var q3: UISegmentedControl!
-    @IBOutlet weak var q4: UISegmentedControl!
+//    @IBOutlet weak var q4: UISegmentedControl!
     @IBOutlet weak var q5: UISegmentedControl!
     @IBOutlet weak var q6: UISegmentedControl!
     @IBOutlet weak var q7: UISegmentedControl!
@@ -35,9 +35,9 @@ class SurveyViewController: UIViewController {
         return self.q3.selectedSegmentIndex == 0
     }
     
-    func getQ4() -> Bool {
-        return self.q4.selectedSegmentIndex == 0
-    }
+//    func getQ4() -> Bool {
+//        return self.q4.selectedSegmentIndex == 0
+//    }
 
     func getQ5() -> Bool {
         return self.q5.selectedSegmentIndex == 0
@@ -75,7 +75,7 @@ class SurveyViewController: UIViewController {
             "q1_attentive": self.getQ1(),
             "q2_hope": self.getQ2(),
             "q3_empathetic": self.getQ3(),
-            "q4_humor": self.getQ4(),
+//            "q4_humor": self.getQ4(),
             "q5_anxiety": self.getQ5(),
             "q6_sleep": self.getQ6(),
             "q7_appetite": getQ7(),
