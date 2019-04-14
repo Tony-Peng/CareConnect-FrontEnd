@@ -14,8 +14,16 @@ struct ExamplesDefaults {
         return iPhoneChartSettings
     }
     
+    static var chartSettings2: ChartSettings {
+        return iPhoneChartSettings
+    }
+    
     static var chartSettingsWithPanZoom: ChartSettings {
         return iPhoneChartSettingsWithPanZoom
+    }
+    
+    static var chartSettingsWithPanZoom2: ChartSettings {
+        return iPhoneChartSettingsWithPanZoom2
     }
     
     fileprivate static var iPhoneChartSettings: ChartSettings {
@@ -34,8 +42,31 @@ struct ExamplesDefaults {
         return chartSettings
     }
     
+    fileprivate static var iPhoneChartSettings2: ChartSettings {
+        var chartSettings = ChartSettings()
+        chartSettings.leading = 0
+        chartSettings.top = 0
+        chartSettings.trailing = 0
+        chartSettings.bottom = 0
+        chartSettings.labelsToAxisSpacingX = 0
+        chartSettings.labelsToAxisSpacingY = 0
+        chartSettings.axisTitleLabelsToLabelsSpacing = 0
+        chartSettings.axisStrokeWidth = 0.0
+        chartSettings.spacingBetweenAxesX = 0
+        chartSettings.spacingBetweenAxesY = 0
+        chartSettings.labelsSpacing = 0
+        return chartSettings
+    }
+    
     fileprivate static var iPhoneChartSettingsWithPanZoom: ChartSettings {
         var chartSettings = iPhoneChartSettings
+        chartSettings.zoomPan.panEnabled = true
+        chartSettings.zoomPan.zoomEnabled = true
+        return chartSettings
+    }
+    
+    fileprivate static var iPhoneChartSettingsWithPanZoom2: ChartSettings {
+        var chartSettings = iPhoneChartSettings2
         chartSettings.zoomPan.panEnabled = true
         chartSettings.zoomPan.zoomEnabled = true
         return chartSettings

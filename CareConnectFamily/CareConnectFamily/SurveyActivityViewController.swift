@@ -13,7 +13,8 @@ import SwiftyJSON
 import ChartLegends
 
 class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
-    fileprivate var chart: Chart?
+    fileprivate var lineChart: Chart?
+    fileprivate var barChart: Chart?
     fileprivate var legend: ChartLegendsView?
 
     let colors = [
@@ -69,17 +70,13 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
     func generateBooleanChart(xValue: Int, yValue: Int, yAxisLabel: String, attentiveData: [(date: String, val: Double)], hopeData: [(date: String, val: Double)], empathyData: [(date: String, val: Double)], humorData: [(date: String, val: Double)]) {
         let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
         
-        let yGenerator = ChartAxisGeneratorMultiplier(1)
-        let labelsGenerator = ChartAxisLabelsGeneratorFunc {scalar in
-            return ChartAxisLabel(text: "\(scalar)", settings: labelSettings)
-        }
-        
         //Generate Axis Values
         let letterAxisValues = [ChartAxisValueString(order: -1)] +
             attentiveData.enumerated().map {index, tuple in ChartAxisValueString(tuple.0, order: index, labelSettings: labelSettings)} + [ChartAxisValueString(order: attentiveData.count)]
+        let trendValues = [ChartAxisValueString("Low", order: 0, labelSettings: labelSettings), ChartAxisValueString("High", order: 1, labelSettings: labelSettings)]
         
         let xModel = ChartAxisModel(axisValues: letterAxisValues, axisTitleLabel: ChartAxisLabel(text: "Past Seven Days", settings: labelSettings))
-        let yModel = ChartAxisModel(firstModelValue: 0, lastModelValue: 1, axisTitleLabels: [ChartAxisLabel(text: yAxisLabel, settings: labelSettings.defaultVertical())], axisValuesGenerator: yGenerator, labelsGenerator: labelsGenerator)
+        let yModel = ChartAxisModel(axisValues: trendValues, axisTitleLabel: ChartAxisLabel(text: "Value", settings: labelSettings.defaultVertical()))
         
         let chartFrame = chartFrameFunc(xValue: xValue, yValue: yValue)
         
@@ -117,8 +114,50 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         legendOutlet.setLegends(legends)
 
         self.view.addSubview(chart.view)
-        self.chart = chart
+        self.lineChart = chart
         legendOutlet.delegate = self
+    }
+    
+    func generateImageBarChart(xValue: Int, yValue: Int, moodData: [(mood: String, value: Int)]) {
+        let labelSettings = ChartLabelSettings(font: ExamplesDefaults.fontWithSize(0))
+        let moodAxisValues = [ChartAxisValueString(order: -1)] +
+            moodData.enumerated().map {index, tuple in ChartAxisValueString(String(tuple.0), order: index, labelSettings: labelSettings)} + [ChartAxisValueString(order: moodData.count)]
+        
+        let valueAxisValues = [ChartAxisValueString(order: -1)] +
+            moodData.enumerated().map {index, tuple in ChartAxisValueString(String(tuple.1), order: index, labelSettings: labelSettings)} + [ChartAxisValueString(order: moodData.count)]
+        print(moodAxisValues)
+        print(valueAxisValues)
+        
+        let xModel = ChartAxisModel(axisValues: valueAxisValues, axisTitleLabel: ChartAxisLabel(text: "Value", settings: labelSettings))
+        let yModel = ChartAxisModel(axisValues: moodAxisValues, axisTitleLabel: ChartAxisLabel(text: "Mood", settings: labelSettings.defaultVertical()))
+        let chartFrame = CGRect(x: xValue
+            , y: yValue, width: 340, height: 275)
+        
+        let chartSettings = ExamplesDefaults.chartSettingsWithPanZoom2
+        
+        let coordsSpace = ChartCoordsSpaceLeftBottomSingleAxis(chartSettings: chartSettings, chartFrame: chartFrame, xModel: xModel, yModel: yModel)
+        let (xAxisLayer, yAxisLayer, innerFrame) = (coordsSpace.xAxisLayer, coordsSpace.yAxisLayer, coordsSpace.chartInnerFrame)
+        let barViewSettings = ChartBarViewSettings(animDuration: 0.5)
+        let zero = ChartAxisValueDouble(0)
+        print(moodData)
+        let bars: [ChartBarModel] = moodData.enumerated().flatMap {tuple in
+            [
+                ChartBarModel(constant: ChartAxisValueDouble(tuple.offset), axisValue1: zero, axisValue2: ChartAxisValueDouble(tuple.element.value), bgColor: UIColor.gray)
+            ]
+        }
+        let barsLayer = ChartBarsLayer(xAxis: xAxisLayer.axis, yAxis: yAxisLayer.axis, bars: bars, horizontal: true, barWidth: 30, settings: barViewSettings)
+        let chart = Chart(
+            frame: chartFrame,
+            innerFrame: innerFrame,
+            settings: chartSettings,
+            layers: [
+                xAxisLayer,
+                yAxisLayer,
+                barsLayer
+            ]
+        )
+        self.view.addSubview(chart.view)
+        self.barChart = chart
     }
     
     func generateLines(data: [(date: String, val: Double)], coordsSpace : ChartCoordsSpaceLeftBottomSingleAxis, color: UIColor) -> ChartPointsLineLayer<ChartPoint> {
@@ -133,17 +172,20 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
     
     
     @IBOutlet weak var trendLabel: UILabel!
+    @IBOutlet weak var moodResultLabel: UILabel!
     @IBOutlet weak var legendOutlet: ChartLegendsView!
     
     var attentiveResponse = [(date: String, val: Int)]()
     var hopeResponse = [(date: String, val: Int)]()
     var empathyResponse = [(date: String, val: Int)]()
     var humorResponse = [(date: String, val: Int)]()
+    var moodResponse = [(date: String, val: Int)]()
     let dateFormatter = DateFormatter()
     let dateFormatterString = DateFormatter()
     override func viewDidLoad() {
         super.viewDidLoad()
         self.formatTitle(label: self.trendLabel)
+        self.formatTitle(label: self.moodResultLabel)
 
         //Grab the survey result from API
         Alamofire.request("https://mas-care-connect.herokuapp.com/quizresponses/?elderly=1", method: .get).responseJSON { response in
@@ -159,12 +201,16 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
                     self.hopeResponse.append((date: dateString, val: v["q2_hope"].int!))
                     self.empathyResponse.append((date: dateString, val: v["q3_empathetic"].int!))
                     self.humorResponse.append((date: dateString, val: v["q4_humor"].int!))
+                    self.moodResponse.append((date: dateString, val: v["q8_mood"].int!))
                 }
                 let attentiveData = self.movingAverage(input: self.attentiveResponse.prefix(7))
                 let hopeData = self.movingAverage(input: self.hopeResponse.prefix(7))
                 let empathyData = self.movingAverage(input: self.empathyResponse.prefix(7))
                 let humorData = self.movingAverage(input: self.humorResponse.prefix(7))
                 self.generateBooleanChart(xValue: 0, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Value", attentiveData: attentiveData, hopeData: hopeData, empathyData : empathyData, humorData: humorData)
+
+                let moodData = self.countMood(input: self.moodResponse.prefix(7))
+                self.generateImageBarChart(xValue: 42, yValue: 475, moodData: moodData)
             case .failure(let error):
                 print(error)
             }
@@ -183,14 +229,35 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         for (k, v) in reversedInput {
             runningAvg += v
             currTotal += 1
-            print(runningAvg, currTotal)
             let newAvg = Double(runningAvg) / Double(currTotal)
             ans.append((date: k, val: newAvg))
         }
         return ans
     }
     
+    func countMood(input : ArraySlice<(date: String, val: Int)>)  -> [(mood: String, value: Int)]{
+        print(input)
+        // Should be like [(mood: 1, count: 3), (mood: 2, count: 4]
+        var counts = [
+            1 : 0,
+            2 : 0, // Always use optional values carefully!
+            3 : 0,
+            4 : 0,
+            5 : 0
+        ]
+        for (_,v) in input {
+            counts.updateValue(counts[Int(v)]! + 1, forKey: Int(v))
+        }
+        var returnArray = [(mood: String, value: Int)]()
+        for (k,v) in counts {
+            returnArray.append((mood: String(k), value: v))
+        }
+        returnArray.sort() { $0.0 > $1.0 }
+        return returnArray
+    }
+    
     func onSelectLegend(legend: ChartLegend, cell: UICollectionViewCell, indexPath: IndexPath) {
         print("Selected legend: \(legend.text)")
     }
 }
+

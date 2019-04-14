@@ -50,7 +50,6 @@ class ActivityViewController: UITableViewController {
                     case .success(let result):
                         self.todayData.removeAll()
                         let json = JSON(result)
-                        print(json.count)
                         for (_,v) in json {
                             let activityId = v["activityType"].int!
                             let msg = self.map[activityId]!
@@ -67,8 +66,6 @@ class ActivityViewController: UITableViewController {
                         for key in allDates {
                             self.activity.append(Activity(date: key.asString(style: .full), desc: self.todayData[key]!))
                         }
-                        print(self.todayData)
-                        print(self.activity)
                         for i in 0..<self.cells.count {
                             self.cells[i].data = self.activity[i]
                             self.cells[i].tableView.reloadData()
