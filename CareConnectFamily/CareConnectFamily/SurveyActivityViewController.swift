@@ -142,7 +142,7 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         print(moodData)
         let bars: [ChartBarModel] = moodData.enumerated().flatMap {tuple in
             [
-                ChartBarModel(constant: ChartAxisValueDouble(tuple.offset), axisValue1: zero, axisValue2: ChartAxisValueDouble(tuple.element.value), bgColor: UIColor.gray)
+                ChartBarModel(constant: ChartAxisValueDouble(tuple.offset), axisValue1: zero, axisValue2: ChartAxisValueDouble(tuple.element.value), bgColor: UIColor.lightGray)
             ]
         }
         let barsLayer = ChartBarsLayer(xAxis: xAxisLayer.axis, yAxis: yAxisLayer.axis, bars: bars, horizontal: true, barWidth: 30, settings: barViewSettings)
@@ -174,6 +174,43 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
     @IBOutlet weak var trendLabel: UILabel!
     @IBOutlet weak var moodResultLabel: UILabel!
     @IBOutlet weak var legendOutlet: ChartLegendsView!
+    @IBAction func refreshButton(_ sender: Any) {
+        //Grab the survey result from API
+        Alamofire.request("https://mas-care-connect.herokuapp.com/quizresponses/?elderly=1", method: .get).responseJSON { response in
+            switch response.result {
+            case .success(let result):
+                self.attentiveResponse.removeAll()
+                self.hopeResponse.removeAll()
+                self.empathyResponse.removeAll()
+                self.humorResponse.removeAll()
+                self.moodResponse.removeAll()
+                self.lineChart?.clearView()
+                self.barChart?.clearView()
+                self.dateFormatter.dateFormat = "yyyy-MM-dd"
+                self.dateFormatterString.dateFormat = "M/d"
+                let json = JSON(result)
+                for(_,v) in json {
+                    let date = self.dateFormatter.date(from: String(v["date"].string!.prefix(10)))
+                    let dateString = self.dateFormatterString.string(from: date!)
+                    self.attentiveResponse.append((date: dateString, val: v["q1_attentive"].int!))
+                    self.hopeResponse.append((date: dateString, val: v["q2_hope"].int!))
+                    self.empathyResponse.append((date: dateString, val: v["q3_empathetic"].int!))
+                    self.humorResponse.append((date: dateString, val: v["q4_humor"].int!))
+                    self.moodResponse.append((date: dateString, val: v["q8_mood"].int!))
+                }
+                let attentiveData = self.movingAverage(input: self.attentiveResponse.prefix(7))
+                let hopeData = self.movingAverage(input: self.hopeResponse.prefix(7))
+                let empathyData = self.movingAverage(input: self.empathyResponse.prefix(7))
+                let humorData = self.movingAverage(input: self.humorResponse.prefix(7))
+                self.generateBooleanChart(xValue: 0, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Value", attentiveData: attentiveData, hopeData: hopeData, empathyData : empathyData, humorData: humorData)
+                
+                let moodData = self.countMood(input: self.moodResponse.prefix(7))
+                self.generateImageBarChart(xValue: 42, yValue: 475, moodData: moodData)
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
     
     var attentiveResponse = [(date: String, val: Int)]()
     var hopeResponse = [(date: String, val: Int)]()
@@ -186,7 +223,6 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         super.viewDidLoad()
         self.formatTitle(label: self.trendLabel)
         self.formatTitle(label: self.moodResultLabel)
-
         //Grab the survey result from API
         Alamofire.request("https://mas-care-connect.herokuapp.com/quizresponses/?elderly=1", method: .get).responseJSON { response in
             switch response.result {
@@ -236,6 +272,7 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
     }
     
     func countMood(input : ArraySlice<(date: String, val: Int)>)  -> [(mood: String, value: Int)]{
+        print(input)
         var counts = [
             0 : 0,
             1 : 0, // Always use optional values carefully!
