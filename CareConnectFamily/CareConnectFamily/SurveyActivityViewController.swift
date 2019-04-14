@@ -236,8 +236,6 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
     }
     
     func countMood(input : ArraySlice<(date: String, val: Int)>)  -> [(mood: String, value: Int)]{
-        print(input)
-        // Should be like [(mood: 1, count: 3), (mood: 2, count: 4]
         var counts = [
             0 : 0,
             1 : 0, // Always use optional values carefully!
@@ -252,7 +250,7 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         for (k,v) in counts {
             returnArray.append((mood: String(k), value: v))
         }
-        returnArray.sort() { $0.0 > $1.0 }
+        returnArray.sort() { $0.0 < $1.0 }
         return returnArray
     }
     
