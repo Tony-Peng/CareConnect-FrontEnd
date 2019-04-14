@@ -239,11 +239,11 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         print(input)
         // Should be like [(mood: 1, count: 3), (mood: 2, count: 4]
         var counts = [
-            1 : 0,
-            2 : 0, // Always use optional values carefully!
+            0 : 0,
+            1 : 0, // Always use optional values carefully!
+            2 : 0,
             3 : 0,
-            4 : 0,
-            5 : 0
+            4 : 0
         ]
         for (_,v) in input {
             counts.updateValue(counts[Int(v)]! + 1, forKey: Int(v))

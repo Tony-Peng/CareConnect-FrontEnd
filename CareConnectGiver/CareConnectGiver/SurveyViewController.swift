@@ -57,6 +57,7 @@ class SurveyViewController: UIViewController {
     }
     
     func getQ8() -> Int {
+        print("YHU", q8.selectedSegmentIndex)
         return q8.selectedSegmentIndex
     }
     
