@@ -198,6 +198,9 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
                 self.hopeResponse.removeAll()
                 self.empathyResponse.removeAll()
                 self.moodResponse.removeAll()
+                self.anxietyResponse.removeAll()
+                self.sleepResponse.removeAll()
+                self.appetiteResponse.removeAll()
                 self.lineChart?.clearView()
                 self.barChart?.clearView()
                 self.dateFormatter.dateFormat = "yyyy-MM-dd"
