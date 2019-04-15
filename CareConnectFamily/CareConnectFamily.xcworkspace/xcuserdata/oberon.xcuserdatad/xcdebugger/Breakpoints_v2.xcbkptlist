@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CareConnectFamily/ActivityViewController.swift"
-            timestampString = "576993389.28526"
+            timestampString = "577001775.2083679"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67"
-            landmarkName = "reloadData()"
+            startingLineNumber = "58"
+            endingLineNumber = "58"
+            landmarkName = "createActivity(json:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -26,12 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CareConnectFamily/ActivityViewController.swift"
-            timestampString = "576993389.285835"
+            timestampString = "577001775.208993"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "reloadData()"
+            startingLineNumber = "61"
+            endingLineNumber = "61"
+            landmarkName = "createActivity(json:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -42,13 +42,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CareConnectFamily/ActivityViewController.swift"
-            timestampString = "576993389.286249"
+            timestampString = "577001775.209509"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "30"
-            endingLineNumber = "30"
-            landmarkName = "surveyAction(_:)"
-            landmarkType = "7">
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "ActivityType"
+            landmarkType = "14">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -58,13 +58,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CareConnectFamily/ActivityViewController.swift"
-            timestampString = "576993389.286575"
+            timestampString = "577001775.210006"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
-            landmarkName = "reloadData()"
-            landmarkType = "7">
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "ActivityViewController"
+            landmarkType = "3">
             <Locations>
                <Location
                   shouldBeEnabled = "No"
@@ -106,25 +106,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CareConnectFamily/ActivityViewController.swift"
-            timestampString = "576993389.286835"
+            timestampString = "577001775.2105089"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CareConnectFamily/ActivityViewController.swift"
-            timestampString = "576993389.2870899"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "159"
-            endingLineNumber = "159">
+            startingLineNumber = "156"
+            endingLineNumber = "156"
+            landmarkName = "ActivityCell"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -140,6 +128,38 @@
             startingLineNumber = "140"
             endingLineNumber = "140"
             landmarkName = "generateImageBarChart(xValue:yValue:moodData:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CareConnectFamily/ActivityViewController.swift"
+            timestampString = "577001775.21108"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "mapActivityTypesFromJSON(data:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CareConnectFamily/ActivityViewController.swift"
+            timestampString = "577001775.211623"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

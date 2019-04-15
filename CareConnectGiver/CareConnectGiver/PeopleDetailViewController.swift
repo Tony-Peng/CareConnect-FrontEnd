@@ -2,8 +2,8 @@
 //  PeopleDetailViewController.swift
 //  CareConnectGiver
 //
-//  Created by Tony on 3/3/19.
-//  Copyright © 2019 Tony. All rights reserved.
+//  Created by Andre on 3/3/19.
+//  Copyright © 2019 Andre. All rights reserved.
 //
 
 import UIKit
