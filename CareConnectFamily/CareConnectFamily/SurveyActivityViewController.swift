@@ -36,28 +36,22 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
             blue: CGFloat(200.0/255.0),
             alpha: CGFloat(1.0)
         ),
-        "Humor" : UIColor(
+        "Anxiety" : UIColor(
             red: CGFloat(245.0/255.0),
             green: CGFloat(130.0/255.0),
             blue: CGFloat(48.0/255.0),
             alpha: CGFloat(1.0)
         ),
-        "Anxiety" : UIColor(
+        "Sleep" : UIColor(
             red: CGFloat(145.0/255.0),
             green: CGFloat(30.0/255.0),
             blue: CGFloat(180.0/255.0),
             alpha: CGFloat(1.0)
         ),
-        "Sleep" : UIColor(
+        "Appetite" : UIColor(
             red: CGFloat(0.0/255.0),
             green: CGFloat(0.0/255.0),
             blue: CGFloat(0.0/255.0),
-            alpha: CGFloat(1.0)
-        ),
-        "Appetite" : UIColor(
-            red: CGFloat(170.0/255.0),
-            green: CGFloat(110.0/255.0),
-            blue: CGFloat(40.0/255.0),
             alpha: CGFloat(1.0)
         )
     ]
@@ -67,7 +61,7 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
             , y: yValue, width: 300, height: 275)
     }
     
-    func generateBooleanChart(xValue: Int, yValue: Int, yAxisLabel: String, attentiveData: [(date: String, val: Double)], hopeData: [(date: String, val: Double)], empathyData: [(date: String, val: Double)], humorData: [(date: String, val: Double)]) {
+    func generateBooleanChart(xValue: Int, yValue: Int, yAxisLabel: String, attentiveData: [(date: String, val: Double)], hopeData: [(date: String, val: Double)], empathyData: [(date: String, val: Double)], anxietyData : [(date: String, val: Double)], sleepData : [(date: String, val: Double)], appetiteData : [(date: String, val: Double)]) {
         let labelSettings = ChartLabelSettings(font: ExamplesDefaults.labelFont)
         
         //Generate Axis Values
@@ -88,7 +82,9 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         let attentiveLineLayer = self.generateLines(data: attentiveData, coordsSpace: coordsSpace, color: colors["Attentiveness"]!)
         let hopeLineLayer = self.generateLines(data: hopeData, coordsSpace: coordsSpace, color: colors["Hope"]!)
         let empathyLineLayer = self.generateLines(data: empathyData, coordsSpace: coordsSpace, color: colors["Empathy"]!)
-        let humorLineLayer = self.generateLines(data: humorData, coordsSpace: coordsSpace, color: colors["Humor"]!)
+        let anxietyLineLayer = self.generateLines(data: anxietyData, coordsSpace: coordsSpace, color: colors["Anxiety"]!)
+        let sleepLineLayer = self.generateLines(data: sleepData, coordsSpace: coordsSpace, color: colors["Sleep"]!)
+        let appetiteLineLayer = self.generateLines(data: appetiteData, coordsSpace: coordsSpace, color: colors["Appetite"]!)
         let chart = Chart(
             frame: chartFrame,
             innerFrame: innerFrame,
@@ -99,14 +95,15 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
                 attentiveLineLayer,
                 hopeLineLayer,
                 empathyLineLayer,
-                humorLineLayer
+                anxietyLineLayer,
+                sleepLineLayer,
+                appetiteLineLayer
             ]
         )
         let legends = [
             (text: "Attentive", color: colors["Attentiveness"]!),
             (text: "Hope", color: colors["Hope"]!),
             (text: "Empathy", color: colors["Empathy"]!),
-            (text: "Humor", color: colors["Humor"]!),
             (text: "Anxiety", color: colors["Anxiety"]!),
             (text: "Sleep", color: colors["Sleep"]!),
             (text: "Appetite", color: colors["Appetite"]!)
@@ -125,8 +122,6 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         
         let valueAxisValues = [ChartAxisValueString(order: -1)] +
             moodData.enumerated().map {index, tuple in ChartAxisValueString(String(tuple.1), order: index, labelSettings: labelSettings)} + [ChartAxisValueString(order: moodData.count)]
-        print(moodAxisValues)
-        print(valueAxisValues)
         
         let xModel = ChartAxisModel(axisValues: valueAxisValues, axisTitleLabel: ChartAxisLabel(text: "Value", settings: labelSettings))
         let yModel = ChartAxisModel(axisValues: moodAxisValues, axisTitleLabel: ChartAxisLabel(text: "Mood", settings: labelSettings.defaultVertical()))
@@ -139,10 +134,14 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
         let (xAxisLayer, yAxisLayer, innerFrame) = (coordsSpace.xAxisLayer, coordsSpace.yAxisLayer, coordsSpace.chartInnerFrame)
         let barViewSettings = ChartBarViewSettings(animDuration: 0.5)
         let zero = ChartAxisValueDouble(0)
-        print(moodData)
         let bars: [ChartBarModel] = moodData.enumerated().flatMap {tuple in
             [
-                ChartBarModel(constant: ChartAxisValueDouble(tuple.offset), axisValue1: zero, axisValue2: ChartAxisValueDouble(tuple.element.value), bgColor: UIColor.lightGray)
+                ChartBarModel(constant: ChartAxisValueDouble(tuple.offset), axisValue1: zero, axisValue2: ChartAxisValueDouble(tuple.element.value), bgColor: UIColor(
+                    red: CGFloat(0.0/255.0),
+                    green: CGFloat(122.0/255.0),
+                    blue: CGFloat(255.0/255.0),
+                    alpha: CGFloat(0.8)
+                ))
             ]
         }
         let barsLayer = ChartBarsLayer(xAxis: xAxisLayer.axis, yAxis: yAxisLayer.axis, bars: bars, horizontal: true, barWidth: 30, settings: barViewSettings)
@@ -175,6 +174,22 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
     @IBOutlet weak var moodResultLabel: UILabel!
     @IBOutlet weak var legendOutlet: ChartLegendsView!
     @IBAction func refreshButton(_ sender: Any) {
+        self.viewDidLoad()
+    }
+    
+    var attentiveResponse = [(date: String, val: Int)]()
+    var hopeResponse = [(date: String, val: Int)]()
+    var empathyResponse = [(date: String, val: Int)]()
+    var moodResponse = [(date: String, val: Int)]()
+    var anxietyResponse = [(date: String, val: Int)]()
+    var sleepResponse = [(date: String, val: Int)]()
+    var appetiteResponse = [(date: String, val: Int)]()
+    let dateFormatter = DateFormatter()
+    let dateFormatterString = DateFormatter()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.formatTitle(label: self.trendLabel)
+        self.formatTitle(label: self.moodResultLabel)
         //Grab the survey result from API
         Alamofire.request("https://mas-care-connect.herokuapp.com/quizresponses/?elderly=1", method: .get).responseJSON { response in
             switch response.result {
@@ -182,7 +197,6 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
                 self.attentiveResponse.removeAll()
                 self.hopeResponse.removeAll()
                 self.empathyResponse.removeAll()
-                self.humorResponse.removeAll()
                 self.moodResponse.removeAll()
                 self.lineChart?.clearView()
                 self.barChart?.clearView()
@@ -195,55 +209,18 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
                     self.attentiveResponse.append((date: dateString, val: v["q1_attentive"].int!))
                     self.hopeResponse.append((date: dateString, val: v["q2_hope"].int!))
                     self.empathyResponse.append((date: dateString, val: v["q3_empathetic"].int!))
-                    self.humorResponse.append((date: dateString, val: v["q4_humor"].int!))
                     self.moodResponse.append((date: dateString, val: v["q8_mood"].int!))
+                    self.anxietyResponse.append((date: dateString, val: v["q5_anxiety"].int!))
+                    self.sleepResponse.append((date: dateString, val: v["q6_sleep"].int!))
+                    self.appetiteResponse.append((date: dateString, val: v["q7_appetite"].int!))
                 }
                 let attentiveData = self.movingAverage(input: self.attentiveResponse.prefix(7))
                 let hopeData = self.movingAverage(input: self.hopeResponse.prefix(7))
                 let empathyData = self.movingAverage(input: self.empathyResponse.prefix(7))
-                let humorData = self.movingAverage(input: self.humorResponse.prefix(7))
-                self.generateBooleanChart(xValue: 0, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Value", attentiveData: attentiveData, hopeData: hopeData, empathyData : empathyData, humorData: humorData)
-                
-                let moodData = self.countMood(input: self.moodResponse.prefix(7))
-                self.generateImageBarChart(xValue: 42, yValue: 475, moodData: moodData)
-            case .failure(let error):
-                print(error)
-            }
-        }
-    }
-    
-    var attentiveResponse = [(date: String, val: Int)]()
-    var hopeResponse = [(date: String, val: Int)]()
-    var empathyResponse = [(date: String, val: Int)]()
-    var humorResponse = [(date: String, val: Int)]()
-    var moodResponse = [(date: String, val: Int)]()
-    let dateFormatter = DateFormatter()
-    let dateFormatterString = DateFormatter()
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.formatTitle(label: self.trendLabel)
-        self.formatTitle(label: self.moodResultLabel)
-        //Grab the survey result from API
-        Alamofire.request("https://mas-care-connect.herokuapp.com/quizresponses/?elderly=1", method: .get).responseJSON { response in
-            switch response.result {
-            case .success(let result):
-                self.dateFormatter.dateFormat = "yyyy-MM-dd"
-                self.dateFormatterString.dateFormat = "M/d"
-                let json = JSON(result)
-                for(_,v) in json {
-                    let date = self.dateFormatter.date(from: String(v["date"].string!.prefix(10)))
-                    let dateString = self.dateFormatterString.string(from: date!)
-                    self.attentiveResponse.append((date: dateString, val: v["q1_attentive"].int!))
-                    self.hopeResponse.append((date: dateString, val: v["q2_hope"].int!))
-                    self.empathyResponse.append((date: dateString, val: v["q3_empathetic"].int!))
-                    self.humorResponse.append((date: dateString, val: v["q4_humor"].int!))
-                    self.moodResponse.append((date: dateString, val: v["q8_mood"].int!))
-                }
-                let attentiveData = self.movingAverage(input: self.attentiveResponse.prefix(7))
-                let hopeData = self.movingAverage(input: self.hopeResponse.prefix(7))
-                let empathyData = self.movingAverage(input: self.empathyResponse.prefix(7))
-                let humorData = self.movingAverage(input: self.humorResponse.prefix(7))
-                self.generateBooleanChart(xValue: 0, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Value", attentiveData: attentiveData, hopeData: hopeData, empathyData : empathyData, humorData: humorData)
+                let anxietyData = self.movingAverage(input: self.anxietyResponse.prefix(7))
+                let sleepData = self.movingAverage(input: self.sleepResponse.prefix(7))
+                let appetiteData = self.movingAverageAppetite(input: self.appetiteResponse.prefix(7))
+                self.generateBooleanChart(xValue: 0, yValue: Int(self.trendLabel.center.y + 4), yAxisLabel: "Value", attentiveData: attentiveData, hopeData: hopeData, empathyData : empathyData, anxietyData : anxietyData, sleepData : sleepData, appetiteData : appetiteData)
 
                 let moodData = self.countMood(input: self.moodResponse.prefix(7))
                 self.generateImageBarChart(xValue: 42, yValue: 475, moodData: moodData)
@@ -269,6 +246,28 @@ class SurveyActivityViewController: UIViewController, ChartLegendsDelegate {
             ans.append((date: k, val: newAvg))
         }
         return ans
+    }
+    
+    func movingAverageAppetite(input : ArraySlice<(date: String, val: Int)>) -> [(date: String, val: Double)] {
+        let reversedInput = input.reversed()
+        var ans = [(date: String, val: Double)]()
+        var runningAvg = 0.0
+        var currTotal = 0.0
+        for (k, v) in reversedInput {
+            if(v == 1) {
+                runningAvg += Double(v)
+            } else if (v == 0) {
+                if(currTotal != 0) {
+                    let prevAvg = Double(runningAvg) / Double(currTotal)
+                    runningAvg += prevAvg
+                }
+            }
+            currTotal += 1
+            let newAvg = Double(runningAvg) / Double(currTotal)
+            ans.append((date: k, val: newAvg))
+        }
+        return ans
+
     }
     
     func countMood(input : ArraySlice<(date: String, val: Int)>)  -> [(mood: String, value: Int)]{
