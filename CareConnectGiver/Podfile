@@ -8,6 +8,7 @@ target 'CareConnectGiver' do
   # Pods for CareConnectGiver
 pod 'Alamofire', '~> 4.0'
 pod 'SwiftyJSON'
+pod 'SwiftCharts', :git => 'https://github.com/i-schuetz/SwiftCharts.git'
 
   target 'CareConnectGiverTests' do
     inherit! :search_paths
@@ -18,5 +19,15 @@ pod 'SwiftyJSON'
     inherit! :search_paths
     # Pods for testing
   end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    if ['SwiftCharts'].include? target.name
+      target.build_configurations.each do |config|
+        config.build_settings['SWIFT_VERSION'] = '4.2'
+      end
+    end
+  end
+end
 
 end

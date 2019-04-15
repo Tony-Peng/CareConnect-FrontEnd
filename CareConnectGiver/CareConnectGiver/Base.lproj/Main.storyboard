@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RRB-Kf-noi">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RRB-Kf-noi">
     <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -277,6 +277,43 @@
                                     <action selector="goToComment:" destination="zfM-SP-YrT" eventType="touchUpInside" id="DHE-qc-2tH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lzz-Lu-c2n">
+                                <rect key="frame" x="82" y="289" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🙂" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBS-Xo-Qpm">
+                                <rect key="frame" x="82" y="326" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😐" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6PI-Ex-2e8">
+                                <rect key="frame" x="82" y="364" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQ3-Ll-Scn">
+                                <rect key="frame" x="82" y="440" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😕" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BEZ-9Z-8Fo">
+                                <rect key="frame" x="82" y="402" width="23" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recent Mood" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cir-Ze-yW0">
+                                <rect key="frame" x="114" y="261" width="147" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -286,7 +323,9 @@
                             <constraint firstItem="ceq-7s-ete" firstAttribute="leading" secondItem="u3s-YW-RiP" secondAttribute="trailing" constant="20.670000000000002" id="6Os-1h-fTM"/>
                             <constraint firstItem="GkX-F3-Y2w" firstAttribute="trailing" secondItem="kHR-tU-XXv" secondAttribute="trailing" constant="83" id="8mG-hI-86H"/>
                             <constraint firstItem="Xqh-Jw-c5Z" firstAttribute="top" secondItem="FVP-40-v2E" secondAttribute="bottom" constant="8" id="9Gk-tV-XjA"/>
+                            <constraint firstItem="tBS-Xo-Qpm" firstAttribute="top" secondItem="lzz-Lu-c2n" secondAttribute="bottom" constant="16" id="Aon-sh-Lpy"/>
                             <constraint firstItem="JZ1-pn-JVB" firstAttribute="top" secondItem="aZ5-Ci-o42" secondAttribute="bottom" constant="8" id="Bnc-8P-99N"/>
+                            <constraint firstItem="BEZ-9Z-8Fo" firstAttribute="top" secondItem="6PI-Ex-2e8" secondAttribute="bottom" constant="17" id="DOb-6n-z1T"/>
                             <constraint firstItem="8ZD-aW-wUM" firstAttribute="top" secondItem="RYw-X5-fmT" secondAttribute="bottom" constant="8" id="EpF-ap-Jfe"/>
                             <constraint firstItem="JZ1-pn-JVB" firstAttribute="leading" secondItem="Xqh-Jw-c5Z" secondAttribute="trailing" constant="22" id="GZ8-o3-hjM"/>
                             <constraint firstItem="jlf-ab-0PK" firstAttribute="leading" secondItem="8ZD-aW-wUM" secondAttribute="trailing" constant="39" id="H9F-KG-ZSs"/>
@@ -306,12 +345,15 @@
                             <constraint firstItem="FVP-40-v2E" firstAttribute="top" secondItem="xtQ-V3-0li" secondAttribute="bottom" constant="20" id="X7k-Jk-ZnX"/>
                             <constraint firstItem="0J1-7K-lbK" firstAttribute="top" secondItem="ZIG-vh-ykO" secondAttribute="bottom" constant="8" id="XWJ-39-dx8"/>
                             <constraint firstItem="ceq-7s-ete" firstAttribute="top" secondItem="GkX-F3-Y2w" secondAttribute="top" constant="433" id="YIx-3Z-1vw"/>
+                            <constraint firstItem="BEZ-9Z-8Fo" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="82" id="YRI-9Y-r3F"/>
+                            <constraint firstItem="6PI-Ex-2e8" firstAttribute="top" secondItem="tBS-Xo-Qpm" secondAttribute="bottom" constant="17" id="Zu5-mu-Td9"/>
                             <constraint firstItem="aZ5-Ci-o42" firstAttribute="top" secondItem="i2E-Sk-paR" secondAttribute="bottom" constant="20" id="a92-AG-k2L"/>
                             <constraint firstItem="p4f-cN-Azr" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="40" id="asW-e0-Y7g"/>
                             <constraint firstItem="0J1-7K-lbK" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="33" id="bYy-3C-a2J"/>
                             <constraint firstItem="Xb1-m8-FyQ" firstAttribute="top" secondItem="eCn-Ah-Bsr" secondAttribute="bottom" constant="20" id="d2M-4L-FL6"/>
                             <constraint firstItem="Xb1-m8-FyQ" firstAttribute="leading" secondItem="RYw-X5-fmT" secondAttribute="trailing" constant="20" id="d4x-W6-pPR"/>
                             <constraint firstItem="kHR-tU-XXv" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="82" id="dIU-eq-MNI"/>
+                            <constraint firstItem="tBS-Xo-Qpm" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="82" id="dMd-AE-Ed8"/>
                             <constraint firstItem="uf4-BS-4v0" firstAttribute="top" secondItem="GkX-F3-Y2w" secondAttribute="top" constant="433" id="eXt-Py-S2O"/>
                             <constraint firstItem="PIq-MI-JZm" firstAttribute="top" secondItem="kHR-tU-XXv" secondAttribute="bottom" constant="16" id="eiF-dQ-0HH"/>
                             <constraint firstItem="uf4-BS-4v0" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="21" id="epr-jw-psU"/>
@@ -320,7 +362,11 @@
                             <constraint firstItem="xtQ-V3-0li" firstAttribute="leading" secondItem="eCn-Ah-Bsr" secondAttribute="trailing" constant="20" id="gvw-Y5-iXT"/>
                             <constraint firstItem="u3s-YW-RiP" firstAttribute="leading" secondItem="PIq-MI-JZm" secondAttribute="trailing" constant="20.670000000000002" id="h6U-UT-yat"/>
                             <constraint firstItem="GkX-F3-Y2w" firstAttribute="trailing" secondItem="UNZ-VA-Id8" secondAttribute="trailing" constant="40" id="hNx-IF-48Y"/>
+                            <constraint firstItem="6PI-Ex-2e8" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="82" id="iHr-VL-Rhk"/>
+                            <constraint firstItem="gQ3-Ll-Scn" firstAttribute="top" secondItem="BEZ-9Z-8Fo" secondAttribute="bottom" constant="17" id="jLh-98-KKZ"/>
                             <constraint firstItem="GkX-F3-Y2w" firstAttribute="trailing" secondItem="JZ1-pn-JVB" secondAttribute="trailing" constant="23" id="m4W-vL-73Q"/>
+                            <constraint firstItem="gQ3-Ll-Scn" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="82" id="pMu-zd-AWM"/>
+                            <constraint firstItem="lzz-Lu-c2n" firstAttribute="leading" secondItem="GkX-F3-Y2w" secondAttribute="leading" constant="82" id="pna-LW-Y5I"/>
                             <constraint firstItem="Xqh-Jw-c5Z" firstAttribute="leading" secondItem="jlf-ab-0PK" secondAttribute="trailing" constant="34" id="qGp-O2-Au0"/>
                             <constraint firstItem="xtQ-V3-0li" firstAttribute="top" secondItem="u3s-YW-RiP" secondAttribute="bottom" constant="8" id="qIP-JS-aEQ"/>
                             <constraint firstItem="zKV-2C-ZYp" firstAttribute="centerX" secondItem="eCn-Ah-Bsr" secondAttribute="centerX" id="qko-is-5Qq"/>
@@ -334,10 +380,12 @@
                             <constraint firstItem="PIq-MI-JZm" firstAttribute="leading" secondItem="rku-Pp-bRc" secondAttribute="trailing" constant="21" id="tvQ-LR-HeU"/>
                             <constraint firstItem="8ZD-aW-wUM" firstAttribute="leading" secondItem="0J1-7K-lbK" secondAttribute="trailing" constant="34" id="w6Z-TB-FS6"/>
                             <constraint firstItem="kHR-tU-XXv" firstAttribute="top" secondItem="zKV-2C-ZYp" secondAttribute="bottom" constant="236" id="wGh-mK-DF1"/>
+                            <constraint firstItem="lzz-Lu-c2n" firstAttribute="top" secondItem="GkX-F3-Y2w" secondAttribute="top" constant="201" id="zJr-Zk-5Kn"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GkX-F3-Y2w"/>
                     </view>
                     <connections>
+                        <outlet property="moodLabel" destination="cir-Ze-yW0" id="K77-ku-PTu"/>
                         <outlet property="profilePic" destination="zKV-2C-ZYp" id="JAH-Fg-mMc"/>
                         <outlet property="titleLabel" destination="kHR-tU-XXv" id="1cg-2T-1HR"/>
                         <segue destination="45S-ie-S7g" kind="show" id="bXW-92-VJE"/>
@@ -346,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qhh-UW-yvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="103" y="-593"/>
+            <point key="canvasLocation" x="101.59999999999999" y="-593.3497536945813"/>
         </scene>
         <!--Comment View Controller-->
         <scene sceneID="NTZ-L3-gEO">
@@ -618,15 +666,15 @@
         </scene>
     </scenes>
     <resources>
-        <image name="artmusic" width="210" height="206"/>
-        <image name="breakfast" width="194" height="206"/>
-        <image name="dinner" width="194" height="174"/>
-        <image name="exercise" width="166" height="210"/>
-        <image name="games" width="266" height="306"/>
-        <image name="lunch" width="188" height="146"/>
-        <image name="medication" width="186" height="202"/>
-        <image name="nap" width="302" height="248"/>
-        <image name="outing" width="260" height="168"/>
-        <image name="shower" width="246" height="248"/>
+        <image name="artmusic" width="105" height="103"/>
+        <image name="breakfast" width="97" height="103"/>
+        <image name="dinner" width="97" height="87"/>
+        <image name="exercise" width="83" height="105"/>
+        <image name="games" width="133" height="153"/>
+        <image name="lunch" width="94" height="73"/>
+        <image name="medication" width="93" height="101"/>
+        <image name="nap" width="151" height="124"/>
+        <image name="outing" width="130" height="84"/>
+        <image name="shower" width="123" height="124"/>
     </resources>
 </document>

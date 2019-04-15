@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		193BEF3722640CBD00E60FD2 /* ExamplesDefault.swift in Sources */ = {isa = PBXBuildFile; fileRef = 193BEF3622640CBD00E60FD2 /* ExamplesDefault.swift */; };
 		1965091722346AC8007F8A5E /* CareConnectService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1965091622346AC8007F8A5E /* CareConnectService.swift */; };
 		2623A72D6D61995BCBA2E29E /* Pods_CareConnectGiver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCDDF392FEDB636311C45C1 /* Pods_CareConnectGiver.framework */; };
 		4C2785FA224830F100723CE3 /* SurveyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2785F9224830F100723CE3 /* SurveyViewController.swift */; };
@@ -43,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		193BEF3622640CBD00E60FD2 /* ExamplesDefault.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesDefault.swift; sourceTree = "<group>"; };
 		1965091622346AC8007F8A5E /* CareConnectService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CareConnectService.swift; sourceTree = "<group>"; };
 		29CB4D19138F5825863BA7BB /* Pods-CareConnectGiver.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CareConnectGiver.release.xcconfig"; path = "Pods/Target Support Files/Pods-CareConnectGiver/Pods-CareConnectGiver.release.xcconfig"; sourceTree = "<group>"; };
 		2D78AD868E4DDCE2E40D845B /* Pods_CareConnectGiverTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CareConnectGiverTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +163,7 @@
 				EA644C0422273D89008A0D22 /* Info.plist */,
 				EAFC405A222CA2BA006071E5 /* PeopleTableViewController.swift */,
 				1965091622346AC8007F8A5E /* CareConnectService.swift */,
+				193BEF3622640CBD00E60FD2 /* ExamplesDefault.swift */,
 			);
 			path = CareConnectGiver;
 			sourceTree = "<group>";
@@ -324,6 +327,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-CareConnectGiver/Pods-CareConnectGiver-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftCharts/SwiftCharts.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -331,6 +335,7 @@
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftCharts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +420,7 @@
 				EAFC405D222CA387006071E5 /* PeopleDetailViewController.swift in Sources */,
 				4C2785FA224830F100723CE3 /* SurveyViewController.swift in Sources */,
 				EAFC405B222CA2BA006071E5 /* PeopleTableViewController.swift in Sources */,
+				193BEF3722640CBD00E60FD2 /* ExamplesDefault.swift in Sources */,
 				1965091722346AC8007F8A5E /* CareConnectService.swift in Sources */,
 				4C955390225BBC6900C4DE02 /* Person.swift in Sources */,
 				4C955392225BCBC300C4DE02 /* PersonTableViewCell.swift in Sources */,
